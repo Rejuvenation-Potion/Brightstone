@@ -18,9 +18,11 @@ You push through the crowd and slide onto the rickety wooden bench across the ta
 
 =drink_order
 Before you can talk further, the bartender walks over. "Can I get you an ale, hon?"
-* (ale) "Yeah, that'd be great."
-* (water) "Water for me, actually."
-* (liquor) {smudge_has_drink}  "I'll have what he's having."
+* (ale) "Yeah, that'd be great." //Good for fight
+
+* (water) "Water for me, actually." //Good for charm/bargain
+    You put some coins on the table--water is expensive in this city--and the 
+* (liquor) {smudge_has_drink}  "I'll have what he's having." //Good for getting answers out of Smudge
 * (none) {not smudge_has_drink} "I'm good, thanks[."] you say, lifting the tankard that had recently been in front of Smudge.
 
 - ->recruitment
