@@ -6,6 +6,12 @@ INCLUDE Act1/midday_scene.ink
 INCLUDE Act1/heist_scene.ink
 
 
+
+//STORY VARIABLES
+LIST dream_outcome = closed, swapped
+
+
+//BEGIN STORY
 //DEMO
 //->bottom_of_the_barrel
 
