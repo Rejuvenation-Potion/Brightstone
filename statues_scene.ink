@@ -1,3 +1,0 @@
-===statues_scene
-
-->END
