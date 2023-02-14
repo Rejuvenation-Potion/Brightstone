@@ -65,8 +65,7 @@ You hope that means he got away, but you need to be sure.
 =wake_up
 * You wake up gasping for air.
 # CLEAR
-->END
-//->morning_tea
+->morning_tea
 
 
 

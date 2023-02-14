@@ -25,18 +25,26 @@ Dierdra gently places the kettle on the table before you, and then sits down acr
 
 "Well," she asks, "what happened next?"
 
+
 TODO: Responses
-* {dream_outcome == (closed)} "I woke myself up[."]," you explain. "I knew I was dreaming this time, so I just stopped it."
+* {dream_outcome == (closed)} "I woke myself up[."]
+    ->mea_culpa
+    ," you explain. "I knew I was dreaming this time, so I just stopped it."
     "Good for you
-* {dream_outcome == (closed)} "I left him behind[,"] you say with some guilt. "I saw him in trouble, and I just decided to wake up."
+* {dream_outcome == (closed)} "I left him behind[,"]
+    ->mea_culpa
+    you say with some guilt. "I saw him in trouble, and I just decided to wake up."
     "Oh nonsense, dearie!" Deirdra admonishes you. "It wasn't real. You did the right thing. That was a big step you took for yourself."
-* {dream_outcome == (swapped)} "This time <i>I</i> turned to stone,"
+* {dream_outcome == (swapped)} "This time <i>I</i> turned to stone,"[]
+    ->mea_culpa
     "Really?" Deirdra replies. "How curious. What happened to your brother?"
     "I think he got away," you reply.
     Deirdra smiles. "How noble of you, dearie!"
 * {dream_outcome == (swapped)} ["I saved him."]
+    ->mea_culpa
 * ["I'd rather not say."]
-    
+    ->mea_culpa
+   
 
 - As she speaks, Deirdra pours water over the leaves in your teacup. "Take your time," she says. "It needs to steep anyway."
 
@@ -130,6 +138,19 @@ Elderly neighbor
 # CLEAR
 ->statues_scene
 
+=mea_culpa
+(NOTE: Oops! Here's where I ran out of time. This is what is intended to happen in the rest of this scene so we can still talk about it:
+    1. Deirdra mixes Brightstone into your tea, which she says is infused with the "essence of potential."
+    2. You drink the tea and Deirdra encourages you to focus your thoughts on your brother's best aspects. You relive a memory of your brother using either strength, agility, or inventiveness to help someone.  
+    3. Your character gains the trait associated with the memory.
+    4. There is suddenly a power outage on your block (The city has primitive electricity powered by Brightstone). Your elderly neighbor bangs on the door, calling your brother's name.
+    5. When you open the door the neighbor initially mistakes you for your brother. He describes the situation causing the power outage, which can conveniently be solved by the skill you just chose.
+    6. You decide whether to correct the neighbor about your identity, and then you use your new skill to restore the power.
+    7. Because you decided to go out into the world and solve this problem, you are there to get the news that new petrified people have just been returned to town. You rush to the town square to see if your brother is among them (Next Scene).
 
+->END
 
+=dregs
  But the refined stuff-- the stuff that powers the everything in the city, from the soft yellow light in your ceiling to the strange new machniery down in the mines--is more of a conductive blue jelly flecked with silver.
+ ->END
+ 
