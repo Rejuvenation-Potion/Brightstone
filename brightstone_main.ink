@@ -9,16 +9,6 @@ INCLUDE Act 1/Scene 6.ink
 INCLUDE Act 1/Scene 7.ink
 
 
-
-
-
-
-
-
-
-
-
-
 //STORY VARIABLES
 LIST dream_outcome = closed, swapped
 
