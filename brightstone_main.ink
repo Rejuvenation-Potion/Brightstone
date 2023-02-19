@@ -10,6 +10,11 @@ INCLUDE Act 1/Scene 7.ink
 
 
 //STORY VARIABLES
+//ACT 1
+//PROLOGUE
+VAR pendant_cracked = false
+
+//UNUSED
 LIST dream_outcome = closed, swapped
 
 
