@@ -125,9 +125,11 @@ Later, you would start planning a way to rescue your brother. <>
 
 * * You just felt helpless.
 
+//DEMO
+->END
 
 # CLEAR
-->act1_scene1
+//->act1_scene1
 
 
 
