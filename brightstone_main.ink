@@ -10,6 +10,12 @@ INCLUDE Act 1/Scene 7.ink
 
 
 //STORY VARIABLES
+
+//TRAITS
+LIST all_traits = strong, agile, inventive, empathetic, insightful, perceptive, brave, shrewd, charming
+VAR brother_traits = ()
+VAR player_traits = ()
+
 //ACT 1
 //PROLOGUE
 VAR pendant_cracked = false

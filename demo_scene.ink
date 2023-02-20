@@ -136,11 +136,11 @@ Suddenly, you're back with your brother, five years ago. You're standing slightl
 Smudge was in trouble back then too, but with upper city guardsmen instead of lower city toughs. The guards were beating up on him, saying that he had swindled them by selling them faulty machinery. Smudge protested that it had just backfired, a known risk when it came to Smudge's tech. It looked like they were going to take Smudge away. But then your brother stepped in and stopped that from happening.
 
 You remember how your brother...
-* (brave) Stood up to the guards to protect his friend[.], and you think you can do the same thing here. 
+* (brave_choice) Stood up to the guards to protect his friend[.], and you think you can do the same thing here. 
 ->bar_fight
-* (shrewd) Cut a new deal that made everyone happy[.], and you think you can do the same thing here.
+* (shrewd_choice) Cut a new deal that made everyone happy[.], and you think you can do the same thing here.
 ->make_a_deal
-* (charming) Diffused the situation with a joke[.], and you think you can do the same thing here. 
+* (charming_choice) Diffused the situation with a joke[.], and you think you can do the same thing here. 
 ->make_a_joke
 
 =bar_fight
@@ -204,11 +204,11 @@ And with that she leaves, henchmen in tow.
 
 ->trait_demo
 =trait_demo
-* {brother_choice.brave} \[Brave\] "We can face the tunnels with or without it. Whatever's out there, I'm not scared."
+* {brother_choice.brave_choice} \[Brave\] "We can face the tunnels with or without it. Whatever's out there, I'm not scared."
     "I know you're not," he laughs, "but I certainly am. And besides, most of my best inventions don't work without it."
-* {brother_choice.shrewd} \[Shrewd\] "We could make another deal with Tabetha[."]," you suggest. "She seems to have a hand in everything."
+* {brother_choice.shrewd_choice} \[Shrewd\] "We could make another deal with Tabetha[."]," you suggest. "She seems to have a hand in everything."
     "Whoa there, kid," Smudge replies. "Now I know you just helped talk me out of trouble, and your brother was always good at making a deal, but Tabetha's not the kind of person you want to owe multiple debts to at once."
-* {brother_choice.charming} \[Charming\] "We could talk our way into the upper city[."]," you suggest. "It's got to be easier to get some up there."
+* {brother_choice.charming_choice} \[Charming\] "We could talk our way into the upper city[."]," you suggest. "It's got to be easier to get some up there."
     "Eh, maybe," Smudge says, "but it tends to be under lock and key even up there. It's getting so scarce these days." 
 * "Got any ideas?"
     Smudge considers for a moment, and then snaps his fingers. 
