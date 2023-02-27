@@ -1,18 +1,27 @@
-INCLUDE demo_scene.ink
-INCLUDE Act 1/Prologue.ink
-INCLUDE Act 1/Scene 1.ink
-INCLUDE Act 1/Scene 2.ink
-INCLUDE Act 1/Scene 3.ink
-INCLUDE Act 1/Scene 4.ink
-INCLUDE Act 1/Scene 5.ink
-INCLUDE Act 1/Scene 6.ink
-INCLUDE Act 1/Scene 7.ink
+INCLUDE Scenes/ZainLeaves.ink
+INCLUDE Scenes/GrowingUpMontage.ink
+INCLUDE Scenes/ZainFound.ink
+INCLUDE Scenes/RecruitSmudge.ink
+INCLUDE Scenes/GetBrightstone.ink
+INCLUDE Scenes/WorkshopThief.ink
+INCLUDE Scenes/Argument.ink
+INCLUDE Scenes/IntoTunnels.ink
+INCLUDE Scenes/ZainGone.ink
+
+
+
+
+
+
+
+
+
 
 
 //STORY VARIABLES
 
 //TRAITS
-LIST all_traits = strong, agile, inventive, empathetic, insightful, perceptive, brave, shrewd, charming
+LIST all_traits = strong, agile, inventive, empathetic, studious, perceptive, brave, shrewd, charming
 VAR brother_traits = ()
 VAR player_traits = ()
 
@@ -29,4 +38,4 @@ LIST dream_outcome = closed, swapped
 //->bottom_of_the_barrel
 
 //Start of story
-->act1_prologue
+->five_years_ago
