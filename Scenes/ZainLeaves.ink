@@ -28,8 +28,7 @@ It shows in yours as well, since Zain spends most of his time off the job showin
     * * You wouldn't trade it for the world.[] Y
     * * You wish he wasn't so intense about it[.], but for better or worse, y
     - - <>our brother taught you how to be strong.
-    ~player_traits += (strong)
-    ~brother_traits += (strong)
+    ~AddTrait(strong, true)
     (Your character is now Strong! This enables you to see extra choices in some situations. These choices will be labled "[Strong]")
 
 
@@ -38,8 +37,7 @@ In his time off the job Zain shows you how to follow in his footsteps. You think
     * * You wouldn't trade it for the world.[] Y
     * * You wish he wasn't so intense about it[.], but for better or worse, y
      - - <>our brother taught you how to be agile.
-    ~player_traits += (agile)
-    ~brother_traits += (agile)
+    ~AddTrait(agile, true)
     (Your character is now Agile! This enables you to see extra choices in some situations. These choices will be labled "[Agile]")
 
 
@@ -48,8 +46,7 @@ Zain spends most of his time off the job teaching you how to work with Brightsto
     * * You wouldn't trade it for the world.[] Y
     * * You wish he wasn't so intense about it[.], but for better or worse, y
      - - <>our brother taught you how to be inventive.
-    ~player_traits += (inventive)
-    ~brother_traits += (inventive)
+    ~AddTrait(inventive, true)
     (Your character is now Inventive! This enables you to see extra choices in some situations. These choices will be labled "[Inventive]")
 
 - 
@@ -58,23 +55,65 @@ Zain spends most of his time off the job teaching you how to work with Brightsto
 Zain smiles proudly. "See, I knew you'd be fine. <>
 
 {
-    -player_traits == (strong): You're the strongest person I know.
-    -player_traits == (agile): You're the quickest person I know.
-    -player_traits == (inventive): You're the smartest person I know.
+    -HasTrait(strong): You're the strongest person I know.
+    -HasTrait(agile): You're the quickest person I know.
+    -HasTrait(inventive): You're the smartest person I know.
 }
 
-TODO: Help me with your skill (or don't because you don't want him to leave) while I go gather my notebooks
+<> Speaking of, <>
 
+{
+    -HasTrait(strong): would you help me with these boxes while I go get the rest of my stuff?"
+    Zain gestures to a stack of wooden crates in the corner next to his backpack, and then hurries into the other room.
+    ->help_zain_strong
+    -HasTrait(agile): would you give me a hand with my gear while I go get the rest of my stuff?"
+    Zain gestures at his bow and quiver in the corner, and then hurries into the other room.
+    ->help_zain_agile  
+    -HasTrait(inventive): could you take a look at this while I go get the rest of my stuff?"
+    Zain hands you a metal torch and then hurries into the other room.
+    ->help_zain_inventive
+}
 
+TODO: Zain help beat:  Help me with your skill (or don't because you don't want him to leave) while I go gather my notebooks
 
-<> Now, let me show you what I'm working on."
+=help_zain_strong
 
+* {HasTrait(strong)} [\[Strong\] Lift the crates.]
+    You carefully stack the crates inside the pack.
+* [Look inside the crate.]
+    You find that they are filled with explosives.
+    ->help_zain_strong
+* [Don't help.]
+    Maybe if you don't help, Zain won't leave.
 
 - ->zain_plan
 
+=help_zain_agile
+* {HasTrait(agile)} [\[Agile\] Finish fletching the arrows.] You finish fletching the arrows.
+* [Investigate the vials.]
+    You find that they are filled with some kind of poison.
+    ->help_zain_agile
+* [Don't help.]
+    Maybe if you don't help, Zain won't leave.
+- ->zain_plan
+
+=help_zain_inventive
+* {HasTrait(inventive)} [\[Inventive\] Fix the device.]
+    You quickly get to work and fix the device.
+* [Open the machine.]
+    You find a chunk of Brightstone wired to some sort of explosive device.
+    ->help_zain_inventive
+* [Don't help.]
+    Maybe if you don't help, Zain won't leave.
+- ->zain_plan
+
 =zain_plan
-TODO: This is different now right? Just one basilisk, or the Queen, the Mother, something like that? And he wants to kill it? Or you get to decide if he is violent or not?
-Zain darts into the other room and returns carrying an armful of leather journals and rolled parchemnt. He rolls one out on the rickety kitchen table in front of you. A map of the mines, and the tunnels beyond them. You've never seen one this detailed. It seems hand-drawn.
+
+TODO: This is outdated: Zain has discovered that there is only one basilisk, the same one that killed your parents 10 years ago. If he can take it out (violently or not) he thinks he will save the whole town.
+
+Zain returns from your shared bedroom carrying an armful of leather journals and rolled papers. 
+"Now," he says, "let me show you what I'm working on."
+Zain rolls out a piece of parchment on the rickety kitchen table in front of you. A map of the mines, and the tunnels beyond them. You've never seen one this detailed. It seems hand-drawn.
 
 "I'm on to something big," he tells you, pointing to a large circled section in the furthest tunnels. "A score so huge, that the whole city will never have to worry about brightstone shortages ever again!" Zain beams at you, face glowing with excitement.
 
@@ -85,7 +124,7 @@ Zain darts into the other room and returns carrying an armful of leather journal
 Zain unclaspes a leather cord from around his neck and holds it out to you. At the end of the cord is a small stone glowing with a warm blue light. It brightens and dims to a silent rhythm.
 
 {
-    -brother_traits == (inventive): "I created this pendant last night,"
+    - IsBrotherTrait(inventive): "I created this pendant last night,"
     - else: "I had a friend enchant this for me,"
 }
 
@@ -112,8 +151,8 @@ Zain unclaspes a leather cord from around his neck and holds it out to you. At t
 * You call out to your brother[.], hoping that the magic in it will let you communicate in some way. 
 "Zain, Zain!"
 But there is no answer.
-* {player_traits == (inventive)}\[Inventive\] "Maybe it's broken[."]," you think, desperately. You take out your tools and get to work, doing every test you can think of to see if the Brightstone is malfunctioning in some way. But you know in your heart that it isn't.
-* {player_traits == (strong)}\[Strong\] You throw the pendant across the room[.] with a cry of frustration and anguish.
+* {HasTrait(inventive)}\[Inventive\] "Maybe it's broken[."]," you think, desperately. You take out your tools and get to work, doing every test you can think of to see if the Brightstone is malfunctioning in some way. But you know in your heart that it isn't.
+* {HasTrait(strong)}\[Strong\] You throw the pendant across the room[.] with a cry of frustration and anguish.
 
 - Suddenly, it stops in the "on" position, filling the room with briliant blue light. You know what that means, and you feel like your own heart has stopped too.
 
@@ -125,9 +164,9 @@ Picturing your brother alone out there, alive but turned to stone, you hear his 
 
 Later, you would start planning a way to rescue your brother. <>
     {
-        - player_traits == (strong): You would find some way to use your strength to save your brother.
-        - player_traits == (agile): You would find some way to use your agility to save your brother.
-        - player_traits == (inventive): You would start planning schematics for new devices, finding some way to use your ingenuity to save your brother.
+        - HasTrait(strong): You would find some way to use your strength to save your brother.
+        - HasTrait(agile): You would find some way to use your agility to save your brother.
+        - HasTrait(inventive): You would start planning schematics for new devices, finding some way to use your ingenuity to save your brother.
     }
 
 <> In that first moment though, realizing he's gone, you can't remember anything he taught you.
