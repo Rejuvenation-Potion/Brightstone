@@ -142,6 +142,7 @@ Zain unclaspes a leather cord from around his neck and holds it out to you. At t
 ->petrified
 - -> pendant
 
+TODO: I think I should just get rid of this. The "get a job" beat from the next scene becomes the climax of this scene. Keeps people in suspense as to what happened to Zain, and requires less jumping to conclusions by your character
 =petrified
 * Two days later, it is white hot. 
 

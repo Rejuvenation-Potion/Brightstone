@@ -23,7 +23,7 @@ INCLUDE functions.ink
 //STORY VARIABLES
 
 //TRAITS SYSTEM
-LIST all_traits = strong, agile, inventive, empathetic, studious, observant, brave, shrewd, charming
+LIST all_traits = strong, agile, inventive, empathetic, studious, observant, direct, shrewd, charming
 VAR brother_traits = ()
 VAR player_traits = ()
 
@@ -33,7 +33,7 @@ VAR helped_prepare = false
 VAR pendant_cracked = false
 
 //Scene 2
-VAR job_in_mines = false
+//VAR job_in_mines = false
 
 //Scene 3
 

@@ -19,3 +19,9 @@
 ===function RemoveTrait(trait)
 ~player_traits -= trait
 ~return
+
+
+
+//From Ink guide
+===function CameFrom(->x)
+~return TURNS_SINCE(x) == 0

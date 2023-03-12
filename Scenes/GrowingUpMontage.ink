@@ -1,65 +1,111 @@
 ===growing_up
 
-TODO: You want to rescue Zain (or do you choose), but you have no means to do so. In the short term, you need to find a way to support yourself alone. Alternatively, you rely on Tara and Smudge.
-In the days immedaitaely following Zain's disappearance,
-
-Before you could figure out how to rescue Zain, however, other problems presented themselves. Like Zain had said, after about a month the food ran out.
-->get_a_job
-
-TODO: Job beat = I don't know how to support myself -> I'll use my brother's skill. Crisis: Do I want to confront the mines or stay as far away from them as possible? 
-=get_a_job
-{On the first week after Zain disappeared|On the second week}
+TODO: Realizing Zain isn't coming back. Can cope a different way each week until the food runs out. Need to: Briefly Introduce Smudge, Tara, and Deirdre (and Tabetha?). 
+=waiting_for_zain
+{On the first week after Zain disappeared...|On the second week...|On the third week...|Finally, the food ran out. You had to face the truth.}
 * You waited for him to return.
+    Nothing happens.
 * You tried to chase after him.
+    You found that the mines were off-limits to everyone suddenly.
 * You asked Zain's friends for clues.
-* {HasTrait(strong)} You dig new tunnels in the mines.
-* {HasTrait(agile)} You scout new passages in the mines.
-* {HasTrait(inventive)} You help build new mining rigs.
+    Smudge and Tara haven;t heard from him, and he hadn't told them anything specific about his mission.
+* You check at his job.
+    Deirdre seems surprised at his absence, and says she had no idea. She never would have told him to do something so dangerous. She promises she will tell you as soon as she has news.
++ {CHOICE_COUNT() < 1} You had to face the truth.
+    Zain wasn't coming back.
+    ->get_a_job
+    
+- ->waiting_for_zain
 
-- 
 
-You needed to find a way to support yourself
+=get_a_job
+TODO: The moment you decide to use Zain's skills to survive
+Tara and Smudge checked in on you and could help you in the short term, but you knew you needed to find a way to support yourself. 
+
+* {HasTrait(strong)} [\[Strong\]] "I'll use what my brother taught me."
+* {HasTrait(agile)} [\[Agile\]] "I'll use what my brother taught me."
+* {HasTrait(inventive)} [\[Inventive\]] "I'll use what my brother taught me."
+
+TODO: A character lays out your two options. Dierdre for Strong, Tara for Agile, Smudge for Inventive. Makes clear that one will take you far away from thinking about Zain, the other very close.
+
+- You need to decide if your job will either take you close to where Zain disappeared, or as far away as possible.
+
 * {HasTrait(strong)} You dig new tunnels in the mines.
-    ~job_in_mines = true
+    ->job_in_mines
 * {HasTrait(strong)} You build houses far from the mines.
-    ~job_in_mines = false
-    
+    ->job_far_away
 * {HasTrait(agile)} You scout new passages in the mines.
-    ~job_in_mines = true
+    ->job_in_mines
 * {HasTrait(agile)} You run messages to other cities.
-    ~job_in_mines = false
-    
+    ->job_far_away
 * {HasTrait(inventive)} You help build new mining rigs.
-    ~job_in_mines = true
+    ->job_in_mines
 * {HasTrait(inventive)} You help maintain the city's power grid.
-    ~job_in_mines = false
-    
-* You don't know what to do.
+    ->job_far_away
 
-- ->complications
+=job_in_mines
+TODO: Short summary of your job; You are obsessed with finding Zain but stuck in a spiral, not getting anywhere. Short exposition about the city
+You work your job in the mines, <>
+{
+    -HasTrait(strong): digging day in and day out. The work is methodical, 
+    -HasTrait(agile): carefully charting new paths and tunnels. The work is solitary, 
+    -HasTrait(inventive): The work is routine, 
+    -else: and you barely notice the details. The work is monotonous, 
+}
+<> which gives you plenty of time to obsess over finding Zain.
+You gathering what tiny scraps of evidence you can, but you are not getting anywhere.
 
-=complications
-TODO: With your immediate needs met, you begin planning a rescue (approach based on your skill?). However, you have very little indication where to start. Zain took all his notes with him, and he didn't tell you exactly where he was going. You try a number of 
+->rumors_and_exposition
 
-* Y
-* You ask his friends
-* You think about 
+=job_far_away
+TODO: Short summary of your job; You try to put Zain out of your mind, but it doesn't work, and you go into a spiral. Short exposition about the city
+You work your job far from the mines.
+{
+    -HasTrait(strong): <>
+    -HasTrait(agile): <>
+    -HasTrait(inventive): <>
+    -else: <>
+}
+You try to put Zain far from your mind, but any time you hear about other miners disappearing, it brings you right back to that night.
+->rumors_and_exposition
 
+=rumors_and_exposition
+TODO: Regardless of your job, you hear some important exposition--other people are disappearing. You also hear rumors of a petrification cure, but can't find anything concrete
 
-- ->second_trait
+* You check in with Tara and Smudge.
+You learn other people are disappearing. This isn't unheard of, but it's getting more frequent.
+->rumors_and_exposition
+
+* You hear rumors.
+You also hear rumors of a petrification cure, but can't find anything concrete.
+->rumors_and_exposition
+
+TODO: More investigate branches?
+
++ You think about what Zain would do
+->second_trait
 
 =second_trait
+TODO: You think about how Zain learned new things. Each branch has a short example of Zain using that skill.
+You realize you need new information. You realized that Zain mostly learned new things by...
 
-* Studious
-* Observant
-* Empathetic
+* Studying books and history.
+    ~AddTrait(studious, true)
+* Observing his environment.
+    ~AddTrait(observant, true)
+* Talking to other people.
+    ~AddTrait(empathetic, true)
 
-- ->missing_pieces
+- ->five_year_investigation
+=five_year_investigation
+TODO: You use your new skill. You discover the rules of petrification and revival, that revival is possible, and what ingredients/steps you would need to do it. You feel like you get close to finding Zain, but the pieces don't add up. It is like he is being moved.
+For the next five years, 
+* {HasTrait(studious)} [\[Studious\]] You read every book you can find.
+* {HasTrait(observant)} [\[Observant\]] You notice things no one else seems to.
+* {HasTrait(empathetic)} [\[Empathetic\]] You connect with other victims of the Basilisk.
 
-=missing_pieces
+- You discover the rules of petrification and revival, that revival is possible, and what ingredients/steps you would need to do it. You feel like you get close to finding Zain, but the pieces don't add up. It is like he is being moved.
 
-TODO: You remain dead set on rescuing Zain OR You try to put it out of mind
-TODO: Resolution
+TODO: Your efforts actually DO lead to Zain being found multiple times, but Deirdre covers it up. Until finally, Tara happens to see him being moved into the Mining Guild
 
-
-->END
+->zain_found
