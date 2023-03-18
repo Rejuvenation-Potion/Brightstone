@@ -8,6 +8,8 @@ INCLUDE Scenes/Argument.ink
 INCLUDE Scenes/IntoTunnels.ink
 INCLUDE Scenes/ZainGone.ink
 INCLUDE functions.ink
+INCLUDE demo_starts.ink
+
 
 
 
@@ -54,8 +56,9 @@ LIST dream_outcome = closed, swapped
 
 
 //BEGIN STORY
-//DEMO
+//DEMOS
 //->bottom_of_the_barrel
+->demo_scene_5
 
-//Start of story
-->five_years_ago
+//Start of actual story
+//->five_years_ago
