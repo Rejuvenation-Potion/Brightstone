@@ -58,7 +58,7 @@ LIST dream_outcome = closed, swapped
 //BEGIN STORY
 //DEMOS
 //->bottom_of_the_barrel
-->demo_scene_5
+//->demo_scene_5
 
 //Start of actual story
-//->five_years_ago
+->five_years_ago

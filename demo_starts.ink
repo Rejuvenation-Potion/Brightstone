@@ -38,7 +38,8 @@ and <>
 
 You can now begin the scene.
 
-* Start Scene.
+* [Start Scene.]
+# CLEAR
 
 //Possibly also need to set other variables
 

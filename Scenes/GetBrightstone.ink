@@ -2,16 +2,44 @@
 VAR used_group1 = false
 VAR used_group2 = false
 VAR used_group3 = false
-TODO 1: Transition from scene 4
-You Smudge, and Tara go over the plan. 
--> smudge_workshop
+
+
+// I broke this scene into 100 word chunks essentially, I've labled them as numbered beats, with actual word count
+
+//Beat 1: 237 words reading (exact)
+//Trait opportunity: Studious knows something about the weather, Observant spots Tara early/notices Smudge's reaction to the door, empathetic gets more about Smudge wishing he looked better
+It isn't far to Smudge's rundown home in the lowest part of the city, but the day is even hotter than normal, and you are both sweating by the time you get there. You find Tara waiting for you. She is leaning against his door in the shade of a ramshackle tin awning, taking cover from the sun, which will still be directly over the canyon for at least another hour. 
+
+"Felson!" Tara calls out, walking out of the shade to greet you. "You look just as bad as ever!" She extends a hand.
+
+Smudge laughs, but also involuntarily runs a hand over his head, trying in vain to smooth down his wild hair. It springs back immediately, and also leaves a thick coat of soot on Smudge's palm. He smears it across his apron hurriedly before finally clasping Tara's hand.
+
+"It's been too long, Ms. Brin!" Smudge croaks. "Let me just get my keys..." He begins fumbling in his many pockets.
+
+"Don't bother, your door's broken again." Tara strides back to the door. As she pulls the handle, the door immediately topples off its hinges and into the street with a loud clang. "I was hanging around so no one would try to break in."
+
+"I swear I finally fixed that..." Smudge mutters, lost for a moment. He shakes himself out of it, and motions you inside with a too-grand gesture.
+
+"Please, after you."
+
+//Possible other responses just for flavor, like matching his grandness, or "damn, you live like this?"
+* You head inside.
+- -> smudge_workshop
+
 =smudge_workshop
-TODO 2: The Plan Intro
+//Beat 2: Getting down to business, 103-107 words (exact)
+TODO Research: How do you keep water cool in the desert/desert towns?
+Smudge's house is, predictably, even more of a mess on the inside. But before long you've all found a perch among the piles of schematics and machine parts and are passing around a skin of cool water Smudge dug out of his cellar. As you catch Smudge up on the plan, you realize this is the first time since Zain left that the three of you have just sat and talked. It's comforting...
+    * ...and you want to sit in it for a moment.
+    * ...but there's no time to waste.
+- It isn't long before you have your plan laid out in front of you. If you're going to revive Zain, each of you has a job to do.
+->the_jobs
+=the_jobs
 TODO 3: Tara's job
-* Tara
+* You turn to Tara.
     Tara will retrieve the other materials you've already gathered
 TODO 4: Smudge's job
-* Smudge
+* You turn to Smudge. 
     Smudge will construct the machinery
 TODO 5: Your job
 * {CHOICE_COUNT() < 1} "I'll get the Brightstone"
