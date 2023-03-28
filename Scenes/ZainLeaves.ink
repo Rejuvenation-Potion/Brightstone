@@ -1,14 +1,11 @@
 ===five_years_ago
-VAR my_var = 10
-"You'll be fine without me," you older brother, Zain, promised.
+"You'll be fine without me," your older brother, Zain, promised.
 ->home_alone
 =home_alone
 
 You sat in the kitchen as you watched him zip around your two-room house, gathering his gear. Climbing ropes, pickaxe, brightstone lantern, short sword. He was headed into the tunnels for sure.
 
 "I left some money if you need to go down to the market, but there's already enough food in the pantry for like a month. I should only be a few days, so try to save some for me, yeah?" You remember him laughing
-
-~my_var = 0
 
 "Other than that though, you're in charge of the house! So just remember what I've taught you. You think you can do that?" 
 
