@@ -20,7 +20,7 @@ You sat in the kitchen as you watched him zip around your two-room house, gather
 
 
 =first_trait
-TODO: This paragraph was better in past tense?
+//TODO: This paragraph was better in past tense?
 Zain gets serious for a moment, in that "older brother" kind of way. He crouches so he's eye to eye with you, and puts his hands on both your shoulders.
 "What's the most important thing I've taught you?"
 * "How to be strong[."]," you say with confidence. Zain's strength is the main way he contributes in his job excavating new tunnels for the Mining Guild, and it shows in his phisique. 
@@ -74,7 +74,7 @@ Zain smiles proudly. "See, I knew you'd be fine. <>
     ->help_zain_inventive
 }
 
-TODO: Zain help beat:  Help me with your skill (or don't because you don't want him to leave) while I go gather my notebooks
+//TODO: Zain help beat:  Help me with your skill (or don't because you don't want him to leave) while I go gather my notebooks
 
 =help_zain_strong
 
@@ -109,7 +109,7 @@ TODO: Zain help beat:  Help me with your skill (or don't because you don't want 
 
 =zain_plan
 
-TODO: This is outdated: Zain has discovered that there is only one basilisk, the same one that killed your parents 10 years ago. If he can take it out (violently or not) he thinks he will save the whole town.
+//TODO: This is outdated: Zain has discovered that there is only one basilisk, the same one that killed your parents 10 years ago. If he can take it out (violently or not) he thinks he will save the whole town.
 
 Zain returns from your shared bedroom carrying an armful of leather journals and rolled papers. 
 "Now," he says, "let me show you what I'm working on."
@@ -142,7 +142,7 @@ Zain unclaspes a leather cord from around his neck and holds it out to you. At t
 ->petrified
 - -> pendant
 
-TODO: I think I should just get rid of this. The "get a job" beat from the next scene becomes the climax of this scene. Keeps people in suspense as to what happened to Zain, and requires less jumping to conclusions by your character
+//TODO: I think I should just get rid of this. The "get a job" beat from the next scene becomes the climax of this scene. Keeps people in suspense as to what happened to Zain, and requires less jumping to conclusions by your character
 =petrified
 * Two days later, it is white hot. 
 
@@ -157,7 +157,7 @@ But there is no answer.
 
 - Suddenly, it stops in the "on" position, filling the room with briliant blue light. You know what that means, and you feel like your own heart has stopped too.
 
-TODO: Rules for revival have changed
+//TODO: Rules for revival have changed
 
 * <i>He's been turned to stone[.],</i> you think. It's the only explanation; if he was dead, the pendant would have gone dark. That at least was a glimmer of hope; you know that in most cases basilisk petrification could be reversed within one month. After that though, it was permanent.
 

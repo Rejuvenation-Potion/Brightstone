@@ -38,9 +38,11 @@ Smudge's house is, predictably, even more of a mess on the inside. But before lo
 - It isn't long before you have your plan laid out in front of you. If you're going to revive Zain, each of you has a job to do.
 ->the_jobs
 
+VAR jobs_established = 0
+
 =the_jobs
 //Beat 3: 97 words
-{CHOICE_COUNT() < 1: "That just leaves you, kid," Smudge says.}
+{jobs_established >= 2: "That just leaves you, kid," Smudge says.}
 * "Tara, do we have everything we need?"[]
     "I'm going back to the Mining Guild to set up the ritual," Tara says. She places her satchel on the table. "I've already gathered the basic reagents we kept at my house, I just need to pick up the delicate stuff from your place," she says.
         * * "Of course[."]," you say, handing over your house key.
@@ -64,7 +66,7 @@ Smudge's house is, predictably, even more of a mess on the inside. But before lo
     "I actually built most of it 
     */
     
-//Beat 5: 
+//Beat 5: ~200 words reading
 * {CHOICE_COUNT() < 1} "I'll get the Brightstone[."], you say confidently. "Zain and I used to do lifts like this all the time."
     "Sure," Tara says carefully, "but the Brightstone shortage is even worse now than it was back then. Where are you going to get it?"
     * * {HasTrait(studious)} [\[Studious\] “They still store Brightstone in the Lowtown refinery."]
@@ -73,59 +75,102 @@ Smudge's house is, predictably, even more of a mess on the inside. But before lo
     * * ->
     Smudge answers. "You'll have to hit the refinery in Lowtown."
     
-    - - <> He looks around and then picks up yet another crumpled roll of parchement from the floor. When he brushes the dirt off, you see the refinery blueprints.
+    - - <> He looks around and then picks up yet another crumpled roll of parchement from the floor. When he brushes the dirt off, you see the refinery's blueprints.
     "There are a few ways in, but the important thing is here." Smudge points at the center of the diagram. "They have a small vault inside where they store the refined stuff until some Guild stooge can come collect it." 
     "As a Guild stooge myself," Tara counters dryly, "I've heard that place is a fortress. How are you going to get in?"
-    * *  "Just how Zain taught me[."] you explain. 
+    * *  "Just how Zain taught me[."]," you explain. 
         Smudge laughs and claps you on the back. Tara remains stoic<>
         {
             -HasTrait(empathetic):, but you notice a strange look briefly cloud her face. Concern? Disappointment?
             -else:.
         }
-        * * * {HasTrait(empathetic)} [\[Empathetic\]] “Tara, what's wrong?"
+        * * * {HasTrait(empathetic)} \[Empathetic\] “Tara, what's wrong?"[] you ask.
             "Oh," Tara starts, surprised. "It's just... Zain was great, but you're your own person, too. You know that right?"
             * * * * "Of course[."]," you say.
                 "Good." Tara smiles. "Now, because I worry," she says
             * * * * "What are you really saying?"[] you ask her.
-                Tara sighs. "I don't know. I just worry about you. So please," she says
+                Tara sighs. "I don't know. I just worry about you. So please," she says,
         * * * {HasTrait(empathetic)} [(Say nothing.)] ->the_approach
             "Because I worry," she says slowly,
         * * * ->the_approach
             "Because I worry," she says slowly,
-    -> the_approach
-- -> smudge_workshop
+        - - - 
+        -> the_approach
+- 
+~jobs_established += 1
+-> the_jobs
 
 =the_approach
 //Beat 6: 30 words
 <> "just tell me exactly what your plan is."
-You look at the refinery blueprint laid out on the table, and you consider your options.
-* {HasTrait(strong)} [\[Strong\]] “I’ll climb to the balcony and pry open the window.”
-    TODO 7: Strong entrance
-    -> strong_story -> refinery_roof
-* {HasTrait(agile)} [\[Agile\]] “I’ll scale the canyon wall and drop in from the roof.”
-    TODO 8: Agile entrance
-    -> agile_story -> refinery_roof
-* {HasTrait(inventive)} [\[Inventive\]] “I'll redirect the ore conveyers and ride them to the roof."
+You look at the refinery blueprint laid out on the table, and you consider your options. Depending on your approach, it looks like you could enter the refinery from the front, the back, or the roof.
+* {HasTrait(strong)} \[Strong\] “I'll climb to the roof and pry open the skylight[."]," you explain. 
+    //Beat 1-1: 42 words
+    "My arms hurt just thinking about that climb," Smudge laughs. "I could never keep up with you and Zain."
+    Tara nods. "Just be careful once you're up there."
+    -> split_up_gang ->
+    //Beat 1-2: 167 words
+    You part ways, and a few hours later you are in a disused alleyway between the refinery and the canyon wall. At ground level the wall is a dozen feet or more from the building, but just a few feet up it begins curving until it directly overhangs the refinery roof. 
+    It might seem like an obvious entry, but you were careful not to be noticed getting here, and you feel confident you have the place to yourself. The mile-high walls of Brightstone Rift are perfectly smooth, so most people would never consider climbing them in any circumstance, let alone to stage a burglary.
+    But most people aren't Zain. Zain was always looking for ways to prove his strength, and one way he found were the tiny, finger-tip sized ledges that sparsely dot the seemingly smooth surface of the canyon. He was one of the few people able to reliably climb them, and he taught you as well. You see plenty of those handholds here.
+    * * As you dig into your first handholds...
+    - -> strong_story ->
+    TODO: Strong outro
+    ... you find yourself dangling above the roof of the Brightstone refinery, suspended from the final handhold by only your fingertips. You let go and land on the roof with a thud you hope isn't noticable over the din of machinery. From here you are close to the huge skylight windows that run the length of the roof.
+    You approach the closest skylight and 
+    * * You drop through the open skylight.
+    - ->refinery_roof
+* {HasTrait(agile)} [\[Agile\]] “I’ll hop across the rooftops and drop in through the smokestack."
+    TODO 8: Agile intro
+    "
+    -> split_up_gang ->
+    TODO: Agile entrance
+    -> agile_story -> 
+    TODO: Agile outro
+    -> refinery_roof
+* {HasTrait(inventive)} \[Inventive\] “I'll redirect the ore conveyers and ride them to the roof."
+    
     TODO 9: Inventive entrance
+    -> split_up_gang ->
     -> inventive_story ->refinery_roof
-* {HasTrait(studious)} [\[Studious\]] “I know a secret passage."
+* {HasTrait(studious)} \[Studious\] “I know a secret passage past the back gate."
     TODO 10: Studious entrance
+    -> split_up_gang ->
     -> studious_story -> refinery_back
-* {HasTrait(observant)} [\[Observant\]] “I’ll memorize the guards' patrol patterns”
+* {HasTrait(observant)} \[Observant\] “I’ll memorize the guards' patrol patterns and slip in the back.”
     TODO 11: Observant entrance
+    -> split_up_gang ->
     -> observant_story -> refinery_back
-* {HasTrait(empathetic)} [\[Empathetic\]] “I have a friend who works inside."
+* {HasTrait(empathetic)} \[Empathetic\] “I have a friend inside; he'll open the back gate."
     TODO 12: Empathetic entrance
+    -> split_up_gang ->
     -> empathetic_story -> refinery_back
-* {HasTrait(direct)} [\[Direct\]] “I’ll just walk in like I belong”
+* {HasTrait(direct)} \[Direct\] “I’ll just walk in the front like I belong[."],” you say. "Dozens of workers go in and out durning shift change in a few hours. No one will question me."
     TODO 13: Direct entrance
+    "Well you certainly have Zain's confidence!" Smudge remarks.
+    Tara nods. "And that confidence took him pretty far. Sometimes too far."
+    They 
+
+    A few hours later you are
+    -> split_up_gang ->
     -> direct_story -> refinery_front
-* {HasTrait(shrewd)} [\[Shrewd\]] “I’ll bribe the gate guard.”
+* {HasTrait(shrewd)} \[Shrewd\] “I’ll bribe the guard at the front gate.”
     TODO 14: Shrewd entrance
+    -> split_up_gang ->
     -> shrewd_story -> refinery_front
-* {HasTrait(charming)} [\[Charming\]] “I’ll bluff my way in.”
+* {HasTrait(charming)} \[Charming\] “I’ll bluff my way in the front gate.”
     TODO 15: Charming entrance
+    -> split_up_gang ->
     -> charming_story -> refinery_front
+
+=split_up_gang
+//Beat 8: ~40 words
+The three of you put your hands together. "We all know the plan," you begin. "We'll meet back here at sunset." Your companions look to you for a final word of encouragement.
+* "Let's get Zain back."
+* "Everyone be careful."
+* "Thank you both for helping me through this."
+- # CLEAR
+->->
 
 
 =refinery_roof
@@ -294,37 +339,38 @@ This is a big change from the outline: You use each of your traits exactly once.
 
 =strong_story
 TODO 63: Strong story
-->DONE
+...you have a memory of 
+->->
 
 =agile_story
 TODO 64: Agile story
-->DONE
+->->
 
 =inventive_story
 TODO 65: Inventive story
-->DONE
+->->
 
 =studious_story
 TODO 66: studious story
-->DONE
+->->
 
 =observant_story
 TODO 67: observant story
-->DONE
+->->
 
 =empathetic_story
 TODO 68: empathetic story
-->DONE
+->->
 
 =direct_story
 TODO 69: direct story
-->DONE
+->->
 
 =shrewd_story
 TODO 70: shrewd story
-->DONE
+->->
 
 =charming_story
 TODO 71: charming story
-->DONE
+->->
 

@@ -1,5 +1,5 @@
 ===zain_found
-TODO: Start scene on specific job
+//TODO: Start scene on specific job
 { 
     -HasTrait(strong):
     -HasTrait(agile):
@@ -10,7 +10,7 @@ Tara visits you
 ->tara_questions
 
 =tara_questions
-TODO: Tara tells you Zain has been found, and you have an opportunity to ask questions
+//TODO: Tara tells you Zain has been found, and you have an opportunity to ask questions
 {Stuff | to say | each time}
 
 * When did this happen?
@@ -23,7 +23,7 @@ TODO: Tara tells you Zain has been found, and you have an opportunity to ask que
 - ->tara_questions
 
 =mining_guild_exterior
-TODO: You are turned away, but you and Tara identify ways in
+//TODO: You are turned away, but you and Tara identify ways in
 When you get to the Mining Guild, they aren't letting anyone in. But your pendant reacts?
 
 Tara takes you aside and asks you if you want to back out.
@@ -31,8 +31,8 @@ Tara takes you aside and asks you if you want to back out.
 ->use_trait
 
 =use_trait
-TODO: Walk the perimiter and identify ways inside? SCOPE
-TODO: You use your skills to find a way inside
+//TODO: Walk the perimiter and identify ways inside? SCOPE
+//TODO: You use your skills to find a way inside
 - You need to find a way inside. You consider your options.
 * {HasTrait(strong)} [\[Strong\]] "I'll go haul crates with the other workers."
 * {HasTrait(agile)} [\[Agile\]] "I'll climb over the back gate."
@@ -46,7 +46,7 @@ TODO: You use your skills to find a way inside
 - ->mining_guild_interior
 
 =mining_guild_interior
-TODO: Going off-outline here: You use a second trait to find out where Zain is
+//TODO: Going off-outline here: You use a second trait to find out where Zain is
 You're inside. Now you have to find Zain, if he's really here.
 
 * {HasTrait(strong)} [\[Strong\]] You bust down the door.
@@ -59,8 +59,8 @@ You're inside. Now you have to find Zain, if he's really here.
 - ->face_to_face
 
 =face_to_face
-TODO: You come face to face with Zain. Physical description of him frozen there, Greek statue perfection
-TODO: You decide how to react to him
+//TODO: You come face to face with Zain. Physical description of him frozen there, Greek statue perfection
+//TODO: You decide how to react to him
 * You freeze.
 * You embrace him.
 * You speak to him.
@@ -77,12 +77,12 @@ TODO: You decide how to react to him
 - ->face_to_face
 
 =deirdre_arrives
-TODO: Deirdre arrives and pretends to be your friend, but is secretly angry. She pretends not to believe that revial is possible. 
+//TODO: Deirdre arrives and pretends to be your friend, but is secretly angry. She pretends not to believe that revial is possible. 
 * "It is possible."
 ->deirdre_questions
 
 =deirdre_questions
-TODO: You ask Deirdre for help with the three steps of revival. She has excuses for why she can't provide them, and continously discourages you.
+//TODO: You ask Deirdre for help with the three steps of revival. She has excuses for why she can't provide them, and continously discourages you.
 * I need basilisk eyes
 * I need Brightstone.
 * I need an Arcanist.
@@ -90,20 +90,20 @@ TODO: You ask Deirdre for help with the three steps of revival. She has excuses 
 - ->deirdre_questions
 
 =be_back_soon
-TODO: You promise Deirdre--and Zain--that you will be back soon to revive him
+//TODO: You promise Deirdre--and Zain--that you will be back soon to revive him
 * I won't let you down.
 
-TODO: On your way out the door your knowledge skill alerts you that something is wrong
+//TODO: On your way out the door your knowledge skill alerts you that something is wrong
 * {HasTrait(studious)} [\[Studious\]] You notice an error in Deirdre's logic.
 * {HasTrait(observant)} [\[Observant\]] Just before the door shuts, you notice a dark figure appraoch Deirdre.
 * {HasTrait(empathetic)} [\[Empathetic\]] You notice something menacing underneath Deirdre's words.
 
 
-TODO: You and Tara reconvene and decide your next step is to tell Smudge.
+//TODO: You and Tara reconvene and decide your next step is to tell Smudge.
 
 -You and Tara reconvene and decide your next step is to tell Smudge.
 
-TODO: You are taking Zain back to your house? Leave him with Tara?
+//TODO: You are taking Zain back to your house? Leave him with Tara?
 * Let's go.
 ->recruit_smudge
 
