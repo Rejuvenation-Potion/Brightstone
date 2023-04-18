@@ -2,6 +2,7 @@
 VAR used_group1 = false
 VAR used_group2 = false
 VAR used_group3 = false
+LIST guards_alerted = (unseen), seen, alerted
 
 TODO: Find Observant opportunity in the Smudge house scene
 
@@ -115,53 +116,87 @@ You look at the refinery blueprint laid out on the table, and you consider your 
     But most people aren't Zain. Zain was always looking for ways to prove his strength, and one way he found were the tiny, finger-tip sized ledges that sparsely dot the seemingly smooth surface of the canyon. He was one of the few people able to reliably climb them, and he taught you as well. You see plenty of those handholds here.
     * * As you dig into your first handholds...
     - -> strong_story ->
-    TODO: Strong outro
+    //Strong outro: 99 words
     ... you find yourself dangling above the roof of the Brightstone refinery, suspended from the final handhold by only your fingertips. You let go and land on the roof with a thud you hope isn't noticable over the din of machinery. From here you are close to the huge skylight windows that run the length of the roof.
-    You approach the closest skylight and 
-    * * You drop through the open skylight.
+    You approach the closest skylight and see it is secured by heavy iron bars. You think back to Zain lifting that cart axle and smile to yourself. This'll be no problem.
+    * * You pry open the bars and drop through the open skylight.
     - ->refinery_roof
-* {HasTrait(agile)} [\[Agile\]] “I’ll hop across the rooftops and drop in through the smokestack."
-    TODO 8: Agile intro
-    "
+//Beat 8: 47 words
+* {HasTrait(agile)} \[Agile\] “I’ll hop across the rooftops and drop in through the smokestack[."]," you explain.
+    "I never understood how Zain could stand heights like that," Tara says shaking her head.
+    "And I've never been in shape to make those jumps!" Smudge laughs. "But I know you've got this, kid."
     -> split_up_gang ->
-    TODO: Agile entrance
-    -> agile_story -> 
-    TODO: Agile outro
+    //Agile Entrance 184 words
+    You part ways, and a few hours later you are in an open-air market several streets down from the refinery, watching the merchants pack up their stalls for the day. You planned your route to start here, where the buildings are lowest. From here, you'll be able to work your way toward high ground--the network of apartments built directly into the mile-high canyon wall of Brightstone Rift. Once you navigate that network of ladders to its highest point, you should be able to reach the top of the refinery's smokestack, just visible in the distance.
+    You see your opening when a nearby fruit merchant leaves her stall to chase away the tiny jerboa mice trying to steal her berries. As soon as she rounds the corner, you begin running at her unattended cart, using a stack of fruit crates to spring onto the roof of the stall, and from there leaping up to grab the edge of the nearest roof. You pull yourself up without losing momentum, and see the route of rooftops laid before you.
+    * * As you leap across the first few gaps...
+    - -> agile_story -> 
+    //Agile Outro: 132-140 words
+    ...you let the arrow fly, now back in the present. Its hooked tip catches successfully on the rim of the refinery's smokestack directly across from you. You pull the rope taut, forming a tightrope. You deftly make your way across, and then you look back and see the route of rooftops you took to get here, leding back to the market far below. In fact, you can see most of the city from here, Brightstone lights twinkling in the twilight across the canyon floor. 
+    * * "Zain loved views like this[."]," you think to yourself as you gather up the rope. You realize it's the first time you've been up this high alone.
+    * * "I'll bring Zain here once he's back[."]," you think to yourself as you gather up the rope. You imagine how impressed he'll be when he learns you reached this vantage point before him for once.
+    - - With that thought, you lower the rope into the smokestack and prepare to climb down.
+    * * You rappel down into the refinery.
     -> refinery_roof
-* {HasTrait(inventive)} \[Inventive\] “I'll redirect the ore conveyers and ride them to the roof."
+* {HasTrait(inventive)} \[Inventive\] “I'll redirect the ore conveyers and ride them to the roof[,"] you explain. 
+    TODO 9: Inventive intro
     
-    TODO 9: Inventive entrance
     -> split_up_gang ->
-    -> inventive_story ->refinery_roof
+    TODO: Inventive entrance
+    You wait for the work stoppage at shift change
+    * * As you fiddle with the gears...
+    - -> inventive_story ->
+    TODO: Inventive outro
+    You make
+    * * You detach your device
+    -> refinery_roof
 * {HasTrait(studious)} \[Studious\] “I know a secret passage past the back gate."
-    TODO 10: Studious entrance
+    TODO 10: Studious intro
     -> split_up_gang ->
-    -> studious_story -> refinery_back
+    TODO: Studious entrance
+    -> studious_story -> 
+    TODO: Studious outro
+    -> refinery_back
 * {HasTrait(observant)} \[Observant\] “I’ll memorize the guards' patrol patterns and slip in the back.”
-    TODO 11: Observant entrance
+    TODO 11: Observant intro
     -> split_up_gang ->
-    -> observant_story -> refinery_back
+    TODO: Observant entrance
+    -> observant_story -> 
+    TODO: Observant outro
+    -> refinery_back
 * {HasTrait(empathetic)} \[Empathetic\] “I have a friend inside; he'll open the back gate."
-    TODO 12: Empathetic entrance
+    TODO 12: Empathetic intro
     -> split_up_gang ->
-    -> empathetic_story -> refinery_back
+    TODO: Empathetic entrance
+    -> empathetic_story -> 
+    TODO: Empathetic outro
+    -> refinery_back
 * {HasTrait(direct)} \[Direct\] “I’ll just walk in the front like I belong[."],” you say. "Dozens of workers go in and out durning shift change in a few hours. No one will question me."
-    TODO 13: Direct entrance
+    TODO 13: Direct intro
     "Well you certainly have Zain's confidence!" Smudge remarks.
     Tara nods. "And that confidence took him pretty far. Sometimes too far."
-    They 
-
+    They
     A few hours later you are
+
     -> split_up_gang ->
-    -> direct_story -> refinery_front
+        TODO: Direct entrance
+    -> direct_story -> 
+    TODO: Direct outro
+    -> refinery_front
 * {HasTrait(shrewd)} \[Shrewd\] “I’ll bribe the guard at the front gate.”
-    TODO 14: Shrewd entrance
+    TODO 14: Shrewd intro
     -> split_up_gang ->
-    -> shrewd_story -> refinery_front
+    TODO: Shrewd entrance
+    -> shrewd_story -> 
+    TODO: Shrewd outro
+    -> refinery_front
 * {HasTrait(charming)} \[Charming\] “I’ll bluff my way in the front gate.”
-    TODO 15: Charming entrance
+    TODO 15: Charming intro
     -> split_up_gang ->
-    -> charming_story -> refinery_front
+    TODO: Charming Entrance
+    -> charming_story -> 
+    TODO: Charming outro
+    -> refinery_front
 
 =split_up_gang
 //Beat 8: ~40 words
@@ -176,27 +211,29 @@ The three of you put your hands together. "We all know the plan," you begin. "We
 =refinery_roof
 ~used_group1 = true
 TODO 16: Roof challenge: Choose between Group 2 and 3 traits
-* {HasTrait(studious)} [\[Studious\]]
+You drop down onto a catwalk high above the main refinery
+"Ok, once you're inside 
+* {HasTrait(studious)} \[Studious\] You follow the pipes to their source.
     TODO 17: Studious roof
     ~used_group2 = true
     -> studious_story ->
-* {HasTrait(observant)} [\[Observant\]] 
+* {HasTrait(observant)} [\[Observant\]] You observe the workers from above.
     TODO 18: Observant roof
     ~used_group2 = true
     -> observant_story ->
-* {HasTrait(empathetic)} [\[Empathetic\]] 
+* {HasTrait(empathetic)} [\[Empathetic\]] A friend is there waiting for you
     TODO 19: Empathetic roof
     ~used_group2 = true
     -> empathetic_story ->
-* {HasTrait(direct)} [\[Direct\]] 
+* {HasTrait(direct)} [\[Direct\]] You drop straight down.
     TODO 20: Direct roof
     ~used_group3 = true
     -> direct_story ->
-* {HasTrait(shrewd)} [\[Shrewd\]] 
+* {HasTrait(shrewd)} [\[Shrewd\]] You approach the overseer with a bribe? You disguise yourself?
     TODO 21: Shrewd roof
     ~used_group3 = true
     -> shrewd_story ->
-* {HasTrait(charming)} [\[Charming\]] 
+* {HasTrait(charming)} [\[Charming\]] You impersonate a worker.
     TODO 22: Charming roof
     ~used_group3 = true
     -> charming_story ->
@@ -207,7 +244,7 @@ TODO 23: Roof wrap-up
 =refinery_back
 ~used_group2 = true
 TODO 24: Back entrance challenge: Choose between Group 1 and 3 traits
-* {HasTrait(strong)} [\[Strong\]]
+* {HasTrait(strong)} [\[Strong\]] 
     TODO 25: Strong back
     ~used_group1 = true
     -> strong_story ->
@@ -269,16 +306,15 @@ TODO 39: Front entrance wrap-up
 - ->outside_vault
 
 
-
 =outside_vault
 TODO 40: Final challenge: Choose between 2 traits, cannot repeat the one you just used. Only one choice, so effectively tailored to exact trait.
-* {HasTrait(strong) and not used_group1} [\[Strong\]] 
+* {HasTrait(strong) and not used_group1} [\[Strong\]] You pry open the vault door.
     TODO 41: Strong vault
     -> strong_story ->
-* {HasTrait(agile) and not used_group1} [\[Agile\]] 
+* {HasTrait(agile) and not used_group1} [\[Agile\]] You
     TODO 42: Agile vault
     -> agile_story ->
-* {HasTrait(inventive) and not used_group1} [\[Inventive\]] 
+* {HasTrait(inventive) and not used_group1} [\[Inventive\]] You create a copy of the key. 
     TODO 43: Inventive vault
     -> inventive_story ->
 * {HasTrait(studious) and not used_group2} [\[Studious\]] 
@@ -305,28 +341,75 @@ TODO 50: Final challenge wrap-up
 
 =inside_vault
 TODO 51: Inside the vault
-->the_escape
+{
+    -guards_alerted: ->the_escape_seen
+    -else: ->the_escape_unseen
+}
 
-=the_escape
-TODO 52: Absolutely no idea what the interaction is here. Maybe just one more trait choice?
-* {HasTrait(strong)} [\[Strong\]] 
-    TODO 53: Strong escape
-* {HasTrait(agile)} [\[Agile\]] 
-    TODO 54: Agile escape
-* {HasTrait(inventive)} [\[Inventive\]] 
-    TODO 55: Inventive escape
-* {HasTrait(studious)} [\[Studious\]] 
-    TODO 56: Studious escape
-* {HasTrait(observant)} [\[Observant\]] 
-    TODO 57: Observant escape
-* {HasTrait(empathetic)} [\[Empathetic\]] 
-    TODO 58: Empathetic escape
-* {HasTrait(direct)} [\[Direct\]] 
-    TODO 59: Direct escape
-* {HasTrait(shrewd)} [\[Shrewd\]] 
-    TODO 60: Shrewd escape
-* {HasTrait(charming)} [\[Charming\]] 
-    TODO 61: Charming escape
+=the_escape_seen
+TODO 40: Final challenge: use remaining trait
+* {HasTrait(strong) and not used_group1} [\[Strong\]] You pry open the vault door.
+    TODO 41: Strong vault
+    -> strong_story ->
+* {HasTrait(agile) and not used_group1} [\[Agile\]] You
+    TODO 42: Agile vault
+    -> agile_story ->
+* {HasTrait(inventive) and not used_group1} [\[Inventive\]] You create a copy of the key. 
+    TODO 43: Inventive vault
+    -> inventive_story ->
+* {HasTrait(studious) and not used_group2} [\[Studious\]] 
+    TODO 44: Studious vault
+    -> studious_story ->
+* {HasTrait(observant) and not used_group2} [\[Observant\]] 
+    TODO 45: Observant vault
+    -> observant_story ->
+* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]]
+    TODO 46: Empathetic vault
+    -> empathetic_story ->
+* {HasTrait(direct) and not used_group3} [\[Direct\]] 
+    TODO 47: Direct vault
+    -> direct_story ->
+* {HasTrait(shrewd) and not used_group3} [\[Shrewd\]] 
+    TODO 48: Shrewd vault
+    -> shrewd_story ->
+* {HasTrait(charming) and not used_group3} [\[Charming\]]
+    TODO 49: Charming  vault
+    -> charming_story ->
+
+TODO 50: Final challenge wrap-up
+
+
+=the_escape_unseen
+TODO 40: Final challenge: Choose final remaining trait
+* {HasTrait(strong) and not used_group1} [\[Strong\]] You pry open the vault door.
+    TODO 41: Strong vault
+    -> strong_story ->
+* {HasTrait(agile) and not used_group1} [\[Agile\]] You
+    TODO 42: Agile vault
+    -> agile_story ->
+* {HasTrait(inventive) and not used_group1} [\[Inventive\]] You create a copy of the key. 
+    TODO 43: Inventive vault
+    -> inventive_story ->
+* {HasTrait(studious) and not used_group2} [\[Studious\]] 
+    TODO 44: Studious vault
+    -> studious_story ->
+* {HasTrait(observant) and not used_group2} [\[Observant\]] 
+    TODO 45: Observant vault
+    -> observant_story ->
+* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]]
+    TODO 46: Empathetic vault
+    -> empathetic_story ->
+* {HasTrait(direct) and not used_group3} [\[Direct\]] 
+    TODO 47: Direct vault
+    -> direct_story ->
+* {HasTrait(shrewd) and not used_group3} [\[Shrewd\]] 
+    TODO 48: Shrewd vault
+    -> shrewd_story ->
+* {HasTrait(charming) and not used_group3} [\[Charming\]]
+    TODO 49: Charming  vault
+    -> charming_story ->
+
+TODO 50: Final challenge wrap-up
 
 TODO 62: Scene resolution
 ->the_thief
@@ -339,38 +422,67 @@ This is a big change from the outline: You use each of your traits exactly once.
 
 =strong_story
 TODO 63: Strong story
-...you have a memory of 
+...you have a memory of the moment you knew you wanted to be strong like Zain. 
+* 
+*
 ->->
 
 =agile_story
 TODO 64: Agile story
+...you are caught in a memory, following
+And you aren't going to make it.
+Zain catches your hand,
+* You take his hand
+* You push his hand away.
+- You nock the arrrow, draw the bow...
 ->->
 
 =inventive_story
 TODO 65: Inventive story
+
+*
+*
 ->->
 
 =studious_story
 TODO 66: studious story
+
+*
+*
 ->->
 
 =observant_story
 TODO 67: observant story
+
+* 
+* 
 ->->
 
 =empathetic_story
 TODO 68: empathetic story
+
+* 
+* 
 ->->
 
 =direct_story
 TODO 69: direct story
+
+* 
+* 
 ->->
 
 =shrewd_story
 TODO 70: shrewd story
+
+* 
+* 
 ->->
 
 =charming_story
 TODO 71: charming story
+
+* 
+* 
 ->->
 
