@@ -77,7 +77,7 @@ VAR jobs_established = 0
     Smudge answers. "You'll have to hit the refinery in Lowtown."
     
     - - <> He looks around and then picks up yet another crumpled roll of parchement from the floor. When he brushes the dirt off, you see the refinery's blueprints.
-    "There are a few ways in, but the important thing is here." Smudge points at the center of the diagram. "They have a small vault inside where they store the refined stuff until some Guild stooge can come collect it." 
+    "There are a few ways in, but the important thing is here." Smudge points at heavy metal door at the center of the diagram. "They have a small vault inside where they store the refined stuff until some Guild stooge can come collect it." 
     "As a Guild stooge myself," Tara counters dryly, "I've heard that place is a fortress. How are you going to get in?"
     * *  "Just how Zain taught me[."]," you explain. 
         Smudge laughs and claps you on the back. Tara remains stoic<>
@@ -105,9 +105,6 @@ VAR jobs_established = 0
 //Beat 6: 30 words
 <> "just tell me exactly what your plan is."
 You look at the refinery blueprint laid out on the table, and you consider your options. Depending on your approach, it looks like you could enter the refinery from the front, the back, or the roof.
-{HasTrait(agile): isAgile}
-{HasTrait(inventive): isInventive}
-* Test choice
 * {HasTrait(strong)} \[Strong\] “I'll climb to the roof and pry open the skylight[."]," you explain. 
     //Beat 1-1: 42 words
     "My arms hurt just thinking about that climb," Smudge laughs. "I could never keep up with you and Zain."
@@ -175,14 +172,26 @@ You look at the refinery blueprint laid out on the table, and you consider your 
     Sure enough, as the gate opens to let in the night shift workers, you see the guard turn his back to the courtyard--and to the hole in the back fence you noticed while watching his route. Go time.
     * * As you make your move...
     -> observant_story -> 
-    ...you come back to the present just as you see the guard's foot reappear around the corner of the building. By the time he fully rounds the corner, you've slipped through the fence, underneath the balcony he patrols, and into the building.
+    ...you come back to the present just as you see the guard's foot reappear around the corner of the building. By the time he fully rounds the corner, you've slipped through the fence and underneath the balcony he patrols. You're right next to the door in, and safely out of view.
+    * * * You enter the refinery through the door.
     -> refinery_back
-* {HasTrait(empathetic)} \[Empathetic\] “I have a friend inside; he'll open the back gate,"[."]
-    TODO 12: Empathetic intro
+* {HasTrait(empathetic)} \[Empathetic\] “I have a friend inside; he'll open the back gate[."]," you explain.
+    "A friend?" Tara asks "Who?"
+    "An old miner who helped Zain get started back in the day. Name's Gad."
+    "Gad's still around?" Smudge asks, incredulous. "I haven't seen him in close to six years!"
+    "He doesn't get around much these days," you say. "He lost his leg in a mining accident. Zain helped take care of him right after it happened. I kept checking in on him even after Zain...." you trail off. "Anyway, he still helps oversee the refinery. He can get me in."
+    Tara smiles. "Should've known. You have friends everywhere."
     -> split_up_gang ->
-    TODO: Empathetic entrance
+    you are in Gad's house down the street from the refinery, explaining the favor you need over tea.
+    "It's no trouble at all!" Gad says, smiling through his bushy gray beard. 'Stone knows you and your brother never ask for anything in return, it's the least I can do. But have one more cup before you go." He points his cane at the teapot and shifts as if to stand.
+    "I'll get it," you say, motioning for him to stay as you cross the room.
+    * * As you reach for the teapot...
     -> empathetic_story -> 
-    TODO: Empathetic outro
+    ...you come back to reality to the sound of jangling keys, and find yourself at the back gate of the brightsone refinery. Only a small courtyard separates the outer gate from the building itself.
+    "Ah, found it!" Gad says finally, and the gate swings open. You step inside, confident you are unseen--Gad also convicend the gate guard to take the evening off.
+    "This is probably as far as I go," Gad says, tapping his cane softly against his metal leg, "but I hope you find what you're looking for."
+    You thank him, and promise to visit soon. 
+    * * * Then you cross the courtyard and slip into the refinery.
     -> refinery_back
 * {HasTrait(direct)} \[Direct\] “I’ll just walk in the front like I belong[."],” you say. "Dozens of workers go in and out during shift change. No one will question me."
     "Well you certainly have Zain's confidence!" Smudge remarks.
@@ -193,7 +202,8 @@ You look at the refinery blueprint laid out on the table, and you consider your 
     "Left it inside," you say simply, without breaking stride. The guard stares open-mouthed for a moment, surprised you weren't initimdated by him. 
     * * As you walk inside...
     -> direct_story -> 
-    ...you return fully to the present as you break off from the crowd of refinery workers. You scan the room and see no sign of the gate guard. He must have deicded you were telling the truth.
+    ...you return fully to the present still walking with the crowd of refinery workers. You scan the room and see no sign of the gate guard. He must have deicded you were telling the truth.
+    * * * You break off from the crowd.
     -> refinery_front
 * {HasTrait(shrewd)} \[Shrewd\] “I'll trade a refinery worker for his entrance pass and uniform[."]," you explain. "Once I have those I can just blend into the crowd."
     "Hmm," Tara says, mulling it over, "that actually seems like a solid plan."
@@ -209,6 +219,7 @@ You look at the refinery blueprint laid out on the table, and you consider your 
     * * As you make the exchange...
     -> shrewd_story -> 
     ...you return fully to the present as you file through the refinery gates, indistinguisbale from the other workers surronding you. They each hold up their metal emblem as they pass the gate guard, and you do the same. No one notices anything out of the ordinary. You're inside.
+    * * * You slip away from the crowd.
     -> refinery_front
 * {HasTrait(charming)} \[Charming\] “I’ll bluff my way in the front gate[."],” you explain. 
     Tara sighs. "Not the way I would have picked, but then again I never was much of a talker."
@@ -219,10 +230,10 @@ You look at the refinery blueprint laid out on the table, and you consider your 
     * * As you launch into your story...
     -> charming_story -> 
     ...you are still reminicing as the gate guard leads you inside. You made a big show of being lost, and he's giving you a tour.
-    "So through here is the locker room, and around the corner is the vault," he tells you. Try not to get them confused, we aren't supposed to let people near, for obvious reasons."
+    "So through there is the locker room, and around the corner is the vault," he tells you. Try not to get them confused, we aren't supposed to let people near, for obvious reasons."
     "Thanks again, Taz," you say, having already gotten on a first name basis with the guard. "I owe you one."
     "Not at all, not at all!" Taz replies jovially. "Just keep better track of your stuff, you hear?"
-    "Absolutely," you assure him, and Taz happily walks back to his post.
+    * * * "Absolutely," you assure him[.], and Taz happily walks back to his post.
     -> refinery_front
 
 =split_up_gang
@@ -341,36 +352,54 @@ You spot someone who recognizes you
 
 
 =outside_vault
-You find yourself in a corner of the refinery's main room, a mess of conveyer belts and pipes leading to and from a central furnace.
-The first step is done. You think back to the plan.
-"That'll get you inside" Tara had said. "But getting into the vault itself is going to be tougher."
+You find yourself in a corner of the refinery's main room, a mess of conveyer belts and pipes leading to and from a central furnace. The new shift of workers will fill the room soon, but for a few minutes you are alone. The blueprints told you where to go next, and you waste no time. As you wind your way to the vault, you think back to the plan.
+"That'll get you inside" Tara had said. "But getting into the vault itself might be tougher." She points to a heavy metal door in the center of the blueprint.
 "I'm sure the kid'll have it handled!" Smudge says, coming to your defense. But he looks anxious. "You do have it handled. Right, kid?"
-* {HasTrait(strong) and not used_group1} [\[Strong\]] You pry open the vault door.
-    TODO 41: Strong vault
+* {HasTrait(strong) and not used_group1} \[Strong\] "I'll just pry open the door[."]," you say confidently.
+    ~used_group1 = true
+    Tara begins to scoff, but Smudge butts in. "That'll work! The door itself is strong, but the walls of the refinery are kind of falling apart. Guild tries to keep that quiet. With your strength you should be able to tear the door away from the wall."
+    Back in the present, that's exactly what you do. As soon as you reach the vault, you ignore the handle and instead grab onto the doorframe itself. You feel a tiny gap between the door and the bricks surrounding it, just large enough for your fingertips.
+    * * As you feel it start to give...
     -> strong_story ->
-* {HasTrait(agile) and not used_group1} [\[Agile\]] You
-    TODO 42: Agile vault
+    ...You come back to the sound of tearing metal and falling brick as the hinges break free of the wall. You've made a gap large enough to fit through but you weren't exactly subtle about it. You hear cries of alarm echoing down the hallway behind you. You'll have to worry about that later.
+    * * * You squeeze through the opening and pull the door closed behind you.
+* {HasTrait(agile) and not used_group1} \[Agile\] "I'll climb through the vents[."]," you say confidently. 
+    ~used_group1 = true
+    Tara nods. "That does seem like a good way in. Strange that they haven't blocked it off."
+    "Can't be avoided," Smudge says. "Refined Brightstone needs to be kept cool."
+    "Now you just need a way into the vents in the first place," Tara observes.
+    Inside the refinery, you've found it. An entrance high above a suspended catwalk. You quickly clamber up a wall of twisting pipes, leaping backward from there to grab the edge of the catwalk.
+    * * As you climb into the vent...
     -> agile_story ->
+    ...and a vent cover clatters to the floor, back in the present. You drop down from the ceiling and find yourself inside the vault, just as you planned. But you hear a commotion outside the closed door--it seems a guard might have heard your entrance. You'll have to deal with that in a minute.
+    * * * You turn to face the stash of Brightstone.
 * {HasTrait(inventive) and not used_group1} [\[Inventive\]] You create a copy of the key. 
+    ~used_group1 = true
     TODO 43: Inventive vault
     -> inventive_story ->
-* {HasTrait(studious) and not used_group2} [\[Studious\]] 
+* {HasTrait(studious) and not used_group2} \[Studious\] "I know the combination."
+    ~used_group2 = true
     TODO 44: Studious vault
     -> studious_story ->
 * {HasTrait(observant) and not used_group2} [\[Observant\]] 
+    ~used_group2 = true
     TODO 45: Observant vault
     -> observant_story ->
-* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]]
+* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]] 
+    ~used_group2 = true
     TODO 46: Empathetic vault
     -> empathetic_story ->
-* {HasTrait(direct) and not used_group3} [\[Direct\]] 
+* {HasTrait(direct) and not used_group3} \[Direct\] "I'll 
     TODO 47: Direct vault
+    ~used_group3 = true
     -> direct_story ->
 * {HasTrait(shrewd) and not used_group3} [\[Shrewd\]] 
     TODO 48: Shrewd vault
+    ~used_group3 = true
     -> shrewd_story ->
-* {HasTrait(charming) and not used_group3} [\[Charming\]]
+* {HasTrait(charming) and not used_group3} [\[Charming\]] "I'll 
     TODO 49: Charming  vault
+    ~used_group3 = true
     -> charming_story ->
 
 TODO 50: Final challenge wrap-up
@@ -378,37 +407,56 @@ TODO 50: Final challenge wrap-up
 
 =inside_vault
 TODO 51: Inside the vault
-->the_escape
+* You think back to Smudge's workshop.->the_escape
 
 =the_escape
-With the guards closing in, you think back to the plan one more time.
 "Just like that," Smudge had said cheerily, "we'll have the Brightstone we need!"
 "Ok, great" Tara had said, looking at you seriously. "Now how are you getting out?"
-* {HasTrait(strong) and not used_group1} [\[Strong\]] You pry open the vault door.
+"Kid won't be noticed," Smudge says overconfidently. "Walk right out."
+With the guards closing in, that plan's out the window. You'll have to improvise. 
+* You look around, and notice <> 
+
+{ 
+    - HasTrait(strong) and not used_group1: something you can do with your strength. 
+    - HasTrait(agile) and not used_group1: something to do with agility.
+    - HasTrait(inventive) and not used_group1: something to do with invention.
+    - HasTrait(studious) and not used_group2: something to do with knowledge.
+    - HasTrait(observant) and not used_group2:something to do with observation
+    - HasTrait(empathetic) and not used_group2: a way out using empathy.
+    - HasTrait(direct) and not used_group3: a way out using direcness.
+    - HasTrait(shrewd) and not used_group3:
+    - HasTrait(charming) and not used_group3:
+}
+- It's better than nothing.
+
+* {HasTrait(strong) and not used_group1} \[Strong\] You bash through the wall[.], shoulder checking the weak spot repeatedly until it begins to give.
     TODO 41: Strong vault
+    * * As you feel the wall fall away...
     -> strong_story ->
-* {HasTrait(agile) and not used_group1} [\[Agile\]] You
+    
+* {HasTrait(agile) and not used_group1} [\[Agile\]] You jump for the vent.
     TODO 42: Agile vault
+    * * As you do the agile thing.
     -> agile_story ->
-* {HasTrait(inventive) and not used_group1} [\[Inventive\]] You create a copy of the key. 
+* {HasTrait(inventive) and not used_group1} [\[Inventive\]] You create a smoke bomb.
     TODO 43: Inventive vault
     -> inventive_story ->
-* {HasTrait(studious) and not used_group2} [\[Studious\]] 
+* {HasTrait(studious) and not used_group2} [\[Studious\]] ???
     TODO 44: Studious vault
     -> studious_story ->
 * {HasTrait(observant) and not used_group2} [\[Observant\]] 
     TODO 45: Observant vault
     -> observant_story ->
-* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]]
+* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]] 
     TODO 46: Empathetic vault
     -> empathetic_story ->
-* {HasTrait(direct) and not used_group3} [\[Direct\]] 
+* {HasTrait(direct) and not used_group3} [\[Direct\]] You run right through
     TODO 47: Direct vault
     -> direct_story ->
-* {HasTrait(shrewd) and not used_group3} [\[Shrewd\]] 
+* {HasTrait(shrewd) and not used_group3} [\[Shrewd\]] You 
     TODO 48: Shrewd vault
     -> shrewd_story ->
-* {HasTrait(charming) and not used_group3} [\[Charming\]]
+* {HasTrait(charming) and not used_group3} [\[Charming\]] You pretend to be a hostage (?)
     TODO 49: Charming  vault
     -> charming_story ->
 
@@ -467,7 +515,7 @@ TODO 67: observant story
 
 =empathetic_story
 TODO 68: empathetic story
-
+You do good just to do good, not to amass favors. Karma handles that.
 * a
 * b
 - ->->
