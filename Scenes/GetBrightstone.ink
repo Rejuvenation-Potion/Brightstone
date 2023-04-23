@@ -353,7 +353,7 @@ You spot someone who recognizes you
 
 =outside_vault
 You find yourself in a corner of the refinery's main room, a mess of conveyer belts and pipes leading to and from a central furnace. The new shift of workers will fill the room soon, but for a few minutes you are alone. The blueprints told you where to go next, and you waste no time. As you wind your way to the vault, you think back to the plan.
-"That'll get you inside" Tara had said. "But getting into the vault itself might be tougher." She points to a heavy metal door in the center of the blueprint.
+"That'll get you inside" Tara had said. "But getting into the vault itself might be tougher." She points to the heavy metal door in the center of the blueprint.
 "I'm sure the kid'll have it handled!" Smudge says, coming to your defense. But he looks anxious. "You do have it handled. Right, kid?"
 * {HasTrait(strong) and not used_group1} \[Strong\] "I'll just pry open the door[."]," you say confidently.
     ~used_group1 = true
@@ -373,15 +373,23 @@ You find yourself in a corner of the refinery's main room, a mess of conveyer be
     -> agile_story ->
     ...and a vent cover clatters to the floor, back in the present. You drop down from the ceiling and find yourself inside the vault, just as you planned. But you hear a commotion outside the closed door--it seems a guard might have heard your entrance. You'll have to deal with that in a minute.
     * * * You turn to face the stash of Brightstone.
-* {HasTrait(inventive) and not used_group1} [\[Inventive\]] You create a copy of the key. 
+* {HasTrait(inventive) and not used_group1} [\[Inventive\]] "I'll create a device to drill through the lock," you explain confidently.
     ~used_group1 = true
     TODO 43: Inventive vault
     -> inventive_story ->
-* {HasTrait(studious) and not used_group2} \[Studious\] "I know the combination."
+* {HasTrait(studious) and not used_group2} \[Studious\] "I know the combination[."]," you say confidently.
     ~used_group2 = true
-    TODO 44: Studious vault
+    "How? Tara asks. "It changes daily."
+    "Yes, but to make sure all the guards can actually remember it, it's based on a formula." You continue, "I ran across the formula a couple years ago when I was studying old Guild records, trying to find anything they knew about the Basilisk."
+    "Brilliant, kid!" Smudge says proudly.
+    Back in the refinery, you quietly approach the vault door and its large dial lock. You do some quick base 8 math in your head based on today's date, and then spin the dial to enter "56-03-97."
+    * * As the door clicks open...
+    ... a voice behind you brings you back to reality. "Hey, get away from there!" a gruff voice shouts.
+    Shaking away the memory, you dash into the vault and slam it shit behind you. You hear the sound of the dial lock spinning, and then the muffled voice of the guard. "What was that damn combination again? I hate this thing!"
+    It sounds like you'll have at least a minute or two.
+    * * * You turn to face the stash of Brightstone.
     -> studious_story ->
-* {HasTrait(observant) and not used_group2} [\[Observant\]] 
+* {HasTrait(observant) and not used_group2} [\[Observant\]] "I'll
     ~used_group2 = true
     TODO 45: Observant vault
     -> observant_story ->
@@ -402,11 +410,11 @@ You find yourself in a corner of the refinery's main room, a mess of conveyer be
     ~used_group3 = true
     -> charming_story ->
 
-TODO 50: Final challenge wrap-up
 - ->inside_vault
 
 =inside_vault
-TODO 51: Inside the vault
+To your surprise, the vault is almost entirely empty. Your heart drops--was this whole heist for nothing? You search frantically, and find one tiny crate in the far corner of the room. Inside are two blue crystals about as big as your hand. You exhale in relief, but still feel uneasy. If this vault is any indication, then the Brightstone shortage is far worse than the Guild has been letting on.
+In any case, it's enough for your purposes. You grab one of the Brightstone crystals and stash it in a pouch. But the sound of a guard pounding on the vault door reminds you there's still work to be done.
 * You think back to Smudge's workshop.->the_escape
 
 =the_escape
@@ -414,7 +422,7 @@ TODO 51: Inside the vault
 "Ok, great" Tara had said, looking at you seriously. "Now how are you getting out?"
 "Kid won't be noticed," Smudge says overconfidently. "Walk right out."
 With the guards closing in, that plan's out the window. You'll have to improvise. 
-* You look around, and notice <> 
+* You think about what Zain would do[.] You look around, and notice <> 
 
 { 
     - HasTrait(strong) and not used_group1: something you can do with your strength. 
@@ -430,40 +438,55 @@ With the guards closing in, that plan's out the window. You'll have to improvise
 - It's better than nothing.
 
 * {HasTrait(strong) and not used_group1} \[Strong\] You bash through the wall[.], shoulder checking the weak spot repeatedly until it begins to give.
-    TODO 41: Strong vault
     * * As you feel the wall fall away...
     -> strong_story ->
-    
-* {HasTrait(agile) and not used_group1} [\[Agile\]] You jump for the vent.
-    TODO 42: Agile vault
-    * * As you do the agile thing.
+    ...you crash into the back courtyard of the refinery in a shower of rubble. You see two guards flanking the open gate, stunned at your sudden entrance. You charge for the gate, bull rushing through the two guards and sending them sprawling to the ground. You hear them scrambling to get up and pursue, but you have too much momentum, and you leave them in the dust.
+* {HasTrait(agile) and not used_group1} \[Agile\] You jump for the open vent[.], By kicking off the nearest wall to gain height, you manage to just catch the edge with your fingertips.
+    * * As you pull yourself up...
     -> agile_story ->
-* {HasTrait(inventive) and not used_group1} [\[Inventive\]] You create a smoke bomb.
-    TODO 43: Inventive vault
+    ...you disappear into the vent just as you hear a squad of guards burst through the vault door.
+    "Huh? There's no one here!" a voice says.
+    "Search the grounds!" another answers. "They can't have gotten far!"
+    The guards scramble to find you, but you quickly find an exterior vent cover and slip out the gate without them even noticing.
+* {HasTrait(inventive) and not used_group1} \[Inventive\] You take the extra Brightstone[.] and combine it with a mix of components from your toolbelt. In a matter of seconds, you've produced a handfull of smoke bombs.
+    The rdoor to the vault bursts open, and you throw the first of your bombs to the ground.
+    * * As smoke fills the room...
     -> inventive_story ->
+    ...you emerge dive into a final cloud of smoke covering the refinery's front gate. By the time the smoke clears, you are gone.
 * {HasTrait(studious) and not used_group2} [\[Studious\]] ???
     TODO 44: Studious vault
     -> studious_story ->
 * {HasTrait(observant) and not used_group2} [\[Observant\]] 
     TODO 45: Observant vault
     -> observant_story ->
-* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]] 
+* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]] "I need this for my brother."
     TODO 46: Empathetic vault
     -> empathetic_story ->
-* {HasTrait(direct) and not used_group3} [\[Direct\]] You run right through
-    TODO 47: Direct vault
+* {HasTrait(direct) and not used_group3} \[Direct\] You run right through[.], shoving the surprised guards aside as soon as they get the door open. The guards scramble to give chase, but you've given yourself a big head-start.
+    * * As you run directly for the exit...
     -> direct_story ->
-* {HasTrait(shrewd) and not used_group3} [\[Shrewd\]] You 
-    TODO 48: Shrewd vault
+    ...you barrel through one final guard at the front gate, and leave the rest in the dust. You've done it.
+* {HasTrait(shrewd) and not used_group3} \[Shrewd\] You grab the rest of the Brightstone.
+    "Let me out of here, and this is all yours." You hold out the extra chunk of Brightstone. "You can tell them I stole all of it. Just give me five minutes."
+    It only takes the guard a split-second to decide.
+    "Deal."
+    * * As you toss him the crystal...
     -> shrewd_story ->
+    ...you are walking casually out the back gate of the refinery. You are long gone by the time you hear an alarm echoing down the twisting alleyways behind you.
 * {HasTrait(charming) and not used_group3} [\[Charming\]] You pretend to be a hostage (?)
     TODO 49: Charming  vault
     -> charming_story ->
 
-TODO 50: Final challenge wrap-up
--
-
-->the_thief
+- As you hurry to meet back up with your friends, you think about the path you took to get here. Everything you did today, you learend from Zain in one way or another. You turn the Brightstone crystal in your palm as you consider that.
+* You can't wait to tell him about it.
+TODO: Cut this one?
+* It makes you remember better times. 
+* You wish you didn't still depend on him after all this time.
+- You arrive back at Smudge's workshop just as the brightstone streetlights blink on. As the street lights up in blue and green..
+* You know immediately that something is wrong.
+Smudge's door, already broken, now lies dented and discarded a dozen feet into the road. The doorframe it once covered is cracked and splintered. And spilling out into the street from the pitch black interior is a fresh pool of blood.
+->END
+//->the_thief
 
 
 /* 
@@ -473,7 +496,8 @@ This is a big change from the outline: You use each of your traits exactly once.
 
 =strong_story
 TODO 63: Strong story
-...you have a memory of the moment you knew you wanted to be strong like Zain. 
+...you have a memory of the moment you knew you wanted to be strong like Zain. It's almost 10 years ago, just after you lost your parents. 
+<Jean ValJean cart>
 * a
 * b
 - ->->
@@ -502,7 +526,7 @@ TODO 65: Inventive story
 =studious_story
 TODO 66: studious story
 
-* a
+* "Can we take a break?"
 * b
 - ->->
 
