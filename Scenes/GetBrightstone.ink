@@ -138,17 +138,16 @@ You look at the refinery blueprint laid out on the table, and you consider your 
     - - With that thought, you lower the rope into the smokestack and prepare to climb down.
     * * You rappel down into the refinery.
     -> refinery_roof
-* {HasTrait(inventive)} \[Inventive\] “I'll redirect the ore conveyers and ride them to the roof[,"] you explain. 
-    TODO 9: Inventive intro
-    
+* {HasTrait(inventive)} \[Inventive\] “I'll create a zipline to the roof by hooking the ore conveyers to a pulley system[."]," you explain. 
+    "So, what, when the conveyer belts start going they'll pull you up?" Tara asks. "Seems a bit elaborate, but I know that was Zain's style."
+    "Ah, elaborate is where all the fun is!" Smudge laughs. "Good idea, kid."
     -> split_up_gang ->
-    TODO: Inventive entrance
-    You wait for the work stoppage at shift change
-    * * As you fiddle with the gears...
+    you are on a low rooftop across the street from the refinery. By tying a series of wires to some crossbow bolts and firing them in strategic locations between here, the smokestack, and the conveyer belts on the far side of the refinery, you've created your pulley system. At the moment you are suspending a light metal bar from the cable line, which you will use to stabilize yourself and ride to the roof. 
+    You finish tying the knots just as you hear the refinery whistle blow. The conveyer belts start moving, and sure enough, your cables start moving with them.
+    * * As you lift off from the ground...
     -> inventive_story ->
-    TODO: Inventive outro
-    You make
-    * * * You detach your device
+    ...your makeshift cable car reaches its apex, and you drop down onto the roof of the refinery. You quickly identify a nearby skylight as the best way in, but you discover it is locked. Thinking quickly, you take one last length of wire and tie a line between the skylight and your cable car, passing you by again as it heads back to your starting point. The new line struggles against the lock for a moment before popping it open. You're in.
+    * * * You detach your device and drop through the skylight.
     -> refinery_roof
     //Studious Intro: 101 words
 * {HasTrait(studious)} \[Studious\] “I know a secret passage past the back gate[,"]," you say. 
@@ -375,8 +374,13 @@ You find yourself in a corner of the refinery's main room, a mess of conveyer be
     * * * You turn to face the stash of Brightstone.
 * {HasTrait(inventive) and not used_group1} [\[Inventive\]] "I'll create a device to drill through the lock," you explain confidently.
     ~used_group1 = true
-    TODO 43: Inventive vault
+    "A drill?" Tara asks. "How will you power it?"
+    "You can hook into the steam pipes!" Smudge exclaims. "They run all through the facility, attached to the main furnace."
+    Back in the refinery, you cut into one of those pipes, and divert the steam into the engine of your homemade device. The drill springs to life, and you aim it at the vault door.
+    * * As the drill makes contact...
     -> inventive_story ->
+    ...you are brought back to reality as your drill finishes its work and falls to the floor. You quickly unhook it and it spins to a stop. You open the vault door and dash inside, pulling the door closed behind you and stacking some furniture against it as a makeshift barrier now that you've broken the lock. Your work wasn't eactly quiet, but you figure you have at least a couple minutes before the guards arrive.
+    * * * You turn to face the stash of Brightstone
 * {HasTrait(studious) and not used_group2} \[Studious\] "I know the combination[."]," you say confidently.
     ~used_group2 = true
     "How? Tara asks. "It changes daily."
@@ -384,32 +388,74 @@ You find yourself in a corner of the refinery's main room, a mess of conveyer be
     "Brilliant, kid!" Smudge says proudly.
     Back in the refinery, you quietly approach the vault door and its large dial lock. You do some quick base 8 math in your head based on today's date, and then spin the dial to enter "56-03-97."
     * * As the door clicks open...
+    -> studious_story ->
     ... a voice behind you brings you back to reality. "Hey, get away from there!" a gruff voice shouts.
     Shaking away the memory, you dash into the vault and slam it shit behind you. You hear the sound of the dial lock spinning, and then the muffled voice of the guard. "What was that damn combination again? I hate this thing!"
     It sounds like you'll have at least a minute or two.
     * * * You turn to face the stash of Brightstone.
-    -> studious_story ->
-* {HasTrait(observant) and not used_group2} [\[Observant\]] "I'll
+* {HasTrait(observant) and not used_group2} [\[Observant\]] "I'll watch the guards to learn the combination," you explain confidently.
     ~used_group2 = true
-    TODO 45: Observant vault
+    "Makes sense," Tara says. "I know you have the eyes for it."
+    "Just be careful they aren't watching you while you watch them," Smudge cautions.
+    Back in the refinery, you are peering around the corner of the hallway leading to the Vault door. You see a guard approach the door, spin the combination, and peek inside the vault. From your angle you could only see two of the inputs,--"56--03," but it's still a good start.
+    The guard wanders away, and you rush up to the door. Next to the dial you see very faint scratches in the vicinity of the number "97." 
+    * * As you enter the "56-03-97"...
     -> observant_story ->
-* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]] 
+    ... a voice behind you brings you back to reality. "Hey, get away from there!" a gruff voice shouts.
+    Shaking away the memory, you dash into the vault and slam it shit behind you. Fortunately, it's a different guard than before. You hear the sound of the dial lock spinning, and then the muffled voice. "What was that damn combination again? I hate this thing!"
+    It sounds like you'll have at least a minute or two.
+* {HasTrait(empathetic) and not used_group2} \[Empathetic\] "I'll convince someone to give me the combination[."]," you explain confidently.
     ~used_group2 = true
-    TODO 46: Empathetic vault
+    "Easier said than done," Tara observes.
+    "But Zain could do it," Smudge says. "And so can you kid."
+    Back in the refinery, you enter the overseer's office. She is a frazzled-looking older woman who startles as you enter. 
+    "Please, I need your help," you begin. "My brother's life is at stake."
+    "I- well- I-I'm listening," she replies.
+    * * As you plead your case...
     -> empathetic_story ->
-* {HasTrait(direct) and not used_group3} \[Direct\] "I'll 
-    TODO 47: Direct vault
+    ...you feel a piece of paper being pressed into your palm. It reads "56-03-97." The combination.
+    "Take this, but you understand I can't help you further if the guards find you," the overseer tells you.
+    "Thank you, Marne," you say, having learned her name during your conversation. 
+    "Just save your brother."
+    You rush to the vault and enter the combination. The vault opens, but in your haste, you don't know if you were seen or not.
+    * * * You step into the vault and close the door.
+* {HasTrait(direct) and not used_group3} \[Direct\] "I'll force the vault guard to let me in," you say confidently.
     ~used_group3 = true
+    Tara sighs.
+    "Good luck, kid," Smudge says.
+    Back in the refinery, you stride right up to the guard.
+    "Open the vault," you tell him.
+    He laughs. "That's a big ask."
+    You punch him in the face.
+    "I'm not asking," you explain.
+    * * As the guard scrambles for his weapon...
+    
     -> direct_story ->
-* {HasTrait(shrewd) and not used_group3} [\[Shrewd\]] 
-    TODO 48: Shrewd vault
+    * * * You turn to face the stash of Brightstone
+* {HasTrait(shrewd) and not used_group3} [\[Shrewd\]] "I'll make a deal with the vault guard."
+    "Could work," Tara nods.
+    "Just make sure you don't trade away more Brightstone than we need," Smudge says anxiously.
+    Back in the refinery, the deal is easy. You promise the guard that if he lets you in, he can have 20% of whatever you grab."
+    "Deal," he says quickly.
+    * * As he unlocks the vault...
     ~used_group3 = true
     -> shrewd_story ->
-* {HasTrait(charming) and not used_group3} [\[Charming\]] "I'll 
-    TODO 49: Charming  vault
+    ...you are brought back to reality as more guards round the corner. The vault door is open.
+    "Shit. Deal's off kid."
+    You dash inside and slam the door shut before he can grab you, and shove a bunch of furniture in front to buy some time .You probably have
+* {HasTrait(charming) and not used_group3} [\[Charming\]] "I'll fool the vault guard into letting me in."
     ~used_group3 = true
+    Tara sighs.
+    "Good luck, kid," Smudge says.
+    Back in the refinery, you walk casually up to the vault guard and greet him warmly. "Hey buddy!" you say. "I'm here to relieve you, I'm taking next guard shift."
+    "Um, who are you?"
+    You act offended. "What? After that crazy night on the town we had after drinking at the Bottom of the Barrel? Well I guess you were pretty blacked out, I'll forgive you."
+    "Oh, uh yeah," the guard stammers, embarrassed.
+    "Anyway, take the night off!" you say. "Oh, but before you go, could you remind me of the combination?"
+    * * As he tells you the combination...
     -> charming_story ->
-
+    ...you close the vault door behind you. Seconds later, you hear multiple guards banging on the door--it seems your story didn't hold up for long. You should have at least a minute or two though.
+    * * * You turn to face the stash of Brightstone
 - ->inside_vault
 
 =inside_vault
@@ -420,20 +466,20 @@ In any case, it's enough for your purposes. You grab one of the Brightstone crys
 =the_escape
 "Just like that," Smudge had said cheerily, "we'll have the Brightstone we need!"
 "Ok, great" Tara had said, looking at you seriously. "Now how are you getting out?"
-"Kid won't be noticed," Smudge says overconfidently. "Walk right out."
+"Kid won't be noticed," Smudge had said. "Walk right out."
 With the guards closing in, that plan's out the window. You'll have to improvise. 
-* You think about what Zain would do[.] You look around, and notice <> 
-
+* You think about what Zain would do[.] 
+You look around, and notice <> 
 { 
-    - HasTrait(strong) and not used_group1: something you can do with your strength. 
-    - HasTrait(agile) and not used_group1: something to do with agility.
-    - HasTrait(inventive) and not used_group1: something to do with invention.
-    - HasTrait(studious) and not used_group2: something to do with knowledge.
-    - HasTrait(observant) and not used_group2:something to do with observation
-    - HasTrait(empathetic) and not used_group2: a way out using empathy.
-    - HasTrait(direct) and not used_group3: a way out using direcness.
-    - HasTrait(shrewd) and not used_group3:
-    - HasTrait(charming) and not used_group3:
+    - HasTrait(strong) and not used_group1: light coming through cracks in the brick wall. With enough force, it might come down.
+    - HasTrait(agile) and not used_group1: an open air duct high up on the wall.
+    - HasTrait(inventive) and not used_group1: the extra Brightstone crystal, and see that small bits of it have flaked off. You quickly think through what you might be able to create with those flakes and the components you have on hand.
+    - HasTrait(studious) and not used_group2: a seam in the wall. In your studies, you had learned that the Guild sometimes employs secret tunnels to avoid transporting Brightstone in the open. Perhaps this is one of them.
+    - HasTrait(observant) and not used_group2: something off. Something that wasn't present in the blueprints. A brick in the wall that is both the wrong color and the wrong orientation compared to the bricks around it. A hidden switch.
+    - HasTrait(empathetic) and not used_group2: the vault door open. There is only a single guard there, and he seems reluctant to confront you. You get an idea.
+    - HasTrait(direct) and not used_group3: the vault door slam open. There are four guards in the doorway, but you think you can see a path through them. From there it should be a straight shot to the exit.
+    - HasTrait(shrewd) and not used_group3: the extra Brightstone crytsal again. The vault door slams open, and you see only a single guard. You get an idea.
+    - HasTrait(charming) and not used_group3: an open air duct high up on the wall. No time to reach it yourself, but it gives you an idea.
 }
 - It's better than nothing.
 
@@ -449,40 +495,58 @@ With the guards closing in, that plan's out the window. You'll have to improvise
     "Search the grounds!" another answers. "They can't have gotten far!"
     The guards scramble to find you, but you quickly find an exterior vent cover and slip out the gate without them even noticing.
 * {HasTrait(inventive) and not used_group1} \[Inventive\] You take the extra Brightstone[.] and combine it with a mix of components from your toolbelt. In a matter of seconds, you've produced a handfull of smoke bombs.
-    The rdoor to the vault bursts open, and you throw the first of your bombs to the ground.
+    The door to the vault bursts open, and you throw the first of your bombs to the ground.
     * * As smoke fills the room...
     -> inventive_story ->
     ...you emerge dive into a final cloud of smoke covering the refinery's front gate. By the time the smoke clears, you are gone.
-* {HasTrait(studious) and not used_group2} [\[Studious\]] ???
-    TODO 44: Studious vault
+* {HasTrait(studious) and not used_group2} \[Studious\] You search the wall near the seam[.], and you realize that one brick juts out from the others. You press on it, and it clicks in--a hidden switch!
+    The wall begins to rotate, revealing a passageway beyond. You step through, and the wall shuts iteslf behind you just before the guards make it into the vault.
+    You are in total darkness, but your photographic memory of the city's layout should see you through.
+    * * As you step into the darkness...
     -> studious_story ->
-* {HasTrait(observant) and not used_group2} [\[Observant\]] 
-    TODO 45: Observant vault
+    ...you emerge from the secret tunnel, grateful for your perfect memory. You look around and immediately recognize your location: an alleyway several blocks from the refinery. There is no sign of pursuit.
+* {HasTrait(observant) and not used_group2} \[Observant\] You press the switch[.], and the wall begins to rotate, revealing a secret passageway beyond. You step through, and the wall shuts iteslf behind you just before the guards make it into the vault.
+    You are in total darkness, but feel a very faint breeze. If you pay attention, it should lead you to an exit.
+    * * As you step into the darkness...
     -> observant_story ->
-* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]] "I need this for my brother."
-    TODO 46: Empathetic vault
+    ...you emerge from the secret tunnel, grateful that your senses led you to an exit. You look around and quickly get your bearings: you are in an alleyway several blocks from the refinery. There is no sign of pursuit.
+* {HasTrait(empathetic) and not used_group2} [\[Empathetic\]] You tell him the truth.
+    "I need this to save my brother," you explain earnestly. You quickly run through the steps that led you here, and how you know that this Brightstone is the key to reversing Zain's petrification.
+    "Wait, you really think you can bring him back?" The guard sounds surprisingly invested.
+    "I know I can," you reply.
+    The guard looks down. "My daughter was petrified a year ago. The Guild said nothing could be done. But if what you're saying is true..."
+    He looks up, determined. "Come with me. I'll get you out of here."
+    * * As you follow him out of the vault...
     -> empathetic_story ->
+    ...as you walk out the front gate of the refinery. The guard from the vault, who you now know is named Veza, turns to you one last time.
+    "I'll tell them the thief escaped the other direction. Go save your brother. And if it works, well... there are a lot more people out there you could save, too. Please try."
+    "Of course," you promise. "Thank you, Veza."
+    You part ways.
 * {HasTrait(direct) and not used_group3} \[Direct\] You run right through[.], shoving the surprised guards aside as soon as they get the door open. The guards scramble to give chase, but you've given yourself a big head-start.
     * * As you run directly for the exit...
     -> direct_story ->
     ...you barrel through one final guard at the front gate, and leave the rest in the dust. You've done it.
-* {HasTrait(shrewd) and not used_group3} \[Shrewd\] You grab the rest of the Brightstone.
-    "Let me out of here, and this is all yours." You hold out the extra chunk of Brightstone. "You can tell them I stole all of it. Just give me five minutes."
+* {HasTrait(shrewd) and not used_group3} \[Shrewd\] You decide to make a trade.
+    "Let me out of here, and this is all yours." You grab up the extra chunk of Brightstone and hold it out to the guard. "You can tell them I stole all of it. Just give me five minutes."
     It only takes the guard a split-second to decide.
     "Deal."
     * * As you toss him the crystal...
     -> shrewd_story ->
     ...you are walking casually out the back gate of the refinery. You are long gone by the time you hear an alarm echoing down the twisting alleyways behind you.
-* {HasTrait(charming) and not used_group3} [\[Charming\]] You pretend to be a hostage (?)
-    TODO 49: Charming  vault
+* {HasTrait(charming) and not used_group3} \[Charming\] You pretend to be a victim of the "real" thief. Thinking quickly, you throw the crate to the ground, breaking it. You pick up one of the planks and hit yourself in the face with it, making it look like you were attacked. Then you toss the plank up into the vent, creating a loud clatter to imply the "thief's" escape.
+    You finish setting up your ruse just as a single guard bursts through the vault door.
+    "Please help!" you begin. "I followed him in and tried to stop him, but he attacked me and got away."
+    * * As you continue your story...
     -> charming_story ->
-
+    ...the guard is walking you through the front gate of the refinery. "Stay right there," the guard says. "I'll get you some first aid. Then we'll find that thief."
+    You thank the guard profusely. Then, as soon as he turns his back, you are gone.
+    
 - As you hurry to meet back up with your friends, you think about the path you took to get here. Everything you did today, you learend from Zain in one way or another. You turn the Brightstone crystal in your palm as you consider that.
 * You can't wait to tell him about it.
 TODO: Cut this one?
 * It makes you remember better times. 
 * You wish you didn't still depend on him after all this time.
-- You arrive back at Smudge's workshop just as the brightstone streetlights blink on. As the street lights up in blue and green..
+- You mull over that feeling for the rest of your way back, and you arrive back at Smudge's workshop just as the brightstone streetlights blink on. As the street lights up in blue and green..
 * You know immediately that something is wrong.
 Smudge's door, already broken, now lies dented and discarded a dozen feet into the road. The doorframe it once covered is cracked and splintered. And spilling out into the street from the pitch black interior is a fresh pool of blood.
 ->END
@@ -495,11 +559,13 @@ This is a big change from the outline: You use each of your traits exactly once.
 */
 
 =strong_story
-TODO 63: Strong story
-...you have a memory of the moment you knew you wanted to be strong like Zain. It's almost 10 years ago, just after you lost your parents. 
-<Jean ValJean cart>
-* a
-* b
+...you have a memory from almost 10 years ago, just after you lost your parents. You and Zain are in the market near your home when you hear shouts behind you. You turn to see a runaway cart barreling down a steep road, people diving to either side to get out of its way.
+Zain grabs you and leaps to the side, and you both watch the cart slam into a textiles stall, which begins collapsing in on itself. As the dust settles, you hear a man's voice calling for help from under the mangled cart and stall.
+It looks like the wreckage could fully collapse at any second, and the gathered crowd stays back in fear. But Zain leaps into action, looking for leverage in the pile of rubble. He finds it in the heavy cart axle; he grabs hold and begins to lift. To your amazement, not only the cart but all the wreckage on top of it begins to rise. You see the trapped man's hand through the small gap this creates. 
+* You grab the other axle[.], trying to emulate Zain's technique. The cart is even heavier than it looked, and it takes all your strength to lift it even slightly more. But it is just enough.
+* You grab the man's hand[.], trusting that Zain can keep the cart lifted by himself.
+- With you and Zain working together, the man manages to crawl free. You are exhausted from the effort, but Zain appears no worse for wear. 
+* You decide right then that you want to be as strong as Zain.[] As you think that...
 - ->->
 
 =agile_story
@@ -517,51 +583,110 @@ You nod.
 ->->
 
 =inventive_story
-TODO 65: Inventive story
-
-* a
-* b
+...you are outside your home, helping Zain string wires between the brightstone lanterns that light your street. You've been doing this all day, but Zain won't tell you why. Finally, you connect the last one, and Zain hooks some kind of switch to the end of line.
+"You do the honors," he says, handing it to you.
+* You flip the switch[.], and suddenly the street is lit in a rainbow of color. Usually the lanterns are just blue-green, but tonight they are covering the full spectrum. More than that though, they are blinking on and off in elaborate patterns, creating a light show that ripples up and down the street. 
+"Not a bad way to spend the day, huh?" Zain asks, smiling.
+* "Why are we doing this?"[] you ask him. 
+"You'll figure it out in a second" Zain says. "But first you have to see what we've made!"
+    * * You flip the switch[.], and suddenly the street is lit in a rainbow of color. Usually the lanterns are just blue-green, but tonight they are covering the full spectrum. More than that though, they are blinking on and off in elaborate patterns, creating a light show that ripples up and down the street. 
+        "Not a bad way to spend the day, huh?" Zain asks, smiling.
+- It is only then you remember what day it is. The anniversary of your parents  disappearing. Usually that's the worst day of the year for you. But this year Zain managed to take your mind off it entirely.
+"If I could invent anything," Zain says, "it would be something to bring them back." He looks up at the lights. "In the meantime though, this'll do."
+* As you watch the lights dance...
 - ->->
 
 =studious_story
-TODO 66: studious story
-
-* "Can we take a break?"
-* b
+...you are in your home years ago. Piles of books and papers cover every surface. The floor is covered by one giant sheet of parchment, on which you have been painstakingly drawing a full-detail map of the Brightstone mines. Zain appears from behind a stack of books to check your progress.
+"Good work so far," he says. "Now we have to start cross-referencing all of these reports of Basilisk sightings." He points to a huge pile of paper. "If we plot them all on the map, patterns will emerge. That should lead us to its nest."
+* "Can we take a break?"[] you ask. "I've been at this for hours."
+"But we're so close!" Zain pleads. "Until we stop the Basilisk it will petrify more an more people, just like it did to Mom and Dad. It could even get one of us." Zain's tone softens. "I could never let that happen."
+    You see his point, of course, but it means a lot more map-making. With a sigh, 
+* "We should make multiple maps to eliminate conflicting reports[."]," you observe. "It's a lot more work, but we need to be thorough."
+    "Brilliant!" Zain exclaims. "You're really becoming a natural at this!"
+    Pleased, 
+- <> you take up your inkwell and get back to work.
+* As you return to your sketching...
 - ->->
 
 =observant_story
-TODO 67: observant story
-
-* a
-* b
+...you are sitting with Zain on the roof of your house, looking down at the evening street below. An endless crowd of people passes through the blue-green glow of the streetlights. Zain is teaching you how to people-watch.
+"I can tell that guy got in a street fight a few days ago," Zain says, pointing to a man with a slight limp. "He won though--look at how he's carrying himself."
+Zain points more people out of the crowd. "That woman is taking groceries home to her elderly father. Those kids are out past their bedtime, it's their first time sneaking out. And ooh, there's a pickpocket." Sure enough, you see the pickpocket bump into the man who won the street fight and attempt to take off. The fighter trips him up and throws him to the ground, then calmly retrieves his money and walks off, still limping.
+"How do you know all this?" you ask Zain.
+"Just watch," he says, "and you'll learn everything you need to know."
+* "That's amazing[."]," you say, feeling a new connection to the world. 
+* "I'd rather be out there[."]," you say. "I can't just watch my whole life."
+    Zain sighs. "I know the feeling. But we have to stay aware. There's a lot of danger out there for us."
+- "So how about it?" Zain asks. "What do you see?" 
+* As you turn back to the crowd... 
 - ->->
 
 =empathetic_story
-TODO 68: empathetic story
-You do good just to do good, not to amass favors. Karma handles that.
-* a
-* b
+...you have a flash of a day long ago when Zain gave you some advice. He had been gone all day helping a neighbor rebuild his house. You were pretty young, and you were asking why.
+* "Does he owe you now?"
+    "We do good just to do good[."]," Zain replied. "not to amass favors. Karma handles that."
+    * * "Why couldn't he do it himself?"
+    Zain explained how the man had let his house fall apart after his parner died. You got the sense that he was leaving out some details since you were young, but you remember what he said last.
+    "Everyone is living their own story," Zain says. "Just as important as yours or mine."
+* "Why couldn't he do it himself?"
+    Zain explained how the man had let his house fall apart after his parner died. You got the sense that he was leaving out some details since you were young, but you remember what he said last.
+    "Everyone is living their own story," Zain says. "Just as important as yours or mine."
+-
+* As you consider that...
 - ->->
 
 =direct_story
-TODO 69: direct story
-
-* a
-* b
+...you remember a day when all four of you--Zain, Tara, Smudge, and you--were out together. Smudge and Tara were really Zain's friends more than yours back then, but sometimes you tagged along.
+Suddenly, voices call out behind you.
+"Hey Felson, stop right there!"
+"You sold us some real crap this time, Smudge!"
+"You better not have spent our coin already if you know what's good for you!"
+The four of you turn to see a squad of four guards, seemingly itching for a fight.
+"Well, here we go," Tara says, resigned. She's seen this play out before.
+So have you. You know what Zain is about to do, and you think about what your options are.
+* You throw the first punch[.], wanting to show that you are just as up for this as your brother is. Maybe even more so.
+* You try to talk him out of it[.], saying that it isn't worth fighting over this time.
+    "It's always worth fighting over," Zain replies. "When a problem presents itself," he says indicating the guardsmen, "you confront it directly." <>
+        {
+            -HasTrait(strong): Zain cracks his knuckles.
+            -HasTrait(agile): Zain draws his unstrung bow, prepared to use it as a quarterstaff.
+            -HasTrait(inventive): Zain takes a smoke bomb from his pouch and lights it.
+        }
+    You sigh.
+- 
+* As the brawl breaks out...
 - ->->
 
 =shrewd_story
-TODO 70: shrewd story
-
-* a
-* b
+...you remember a day when all four of you--Zain, Tara, Smudge, and you--were out together. Smudge and Tara were really Zain's friends more than yours back then, but sometimes you tagged along.
+Suddenly, voices call out behind you.
+"Hey Felson, stop right there!"
+"You sold us some real crap this time, Smudge!"
+"You better not have spent our coin already if you know what's good for you!"
+The four of you turn to see a squad of four guards, seemingly itching for a fight.
+"Well, here we go," Tara says, resigned. She's seen this play out before.
+So have you. You know what Zain is about to do, and you think about what your options are.
+* You make an offer of your own[,] having seen how your brother wheels and deals with people before. The guards seem surprised that a kid is talking business with them, and end up agreeing to a much lower offer than they would have otherwise.
+* You tell him not to get involved.
+    "I have to," Zain replies. "When a problem presents itself," he says indicating the guardsmen, "you can always work out a deal."
+- 
+* As they hash out what Smudge owes...
 - ->->
 
 =charming_story
-TODO 71: charming story
-
+...you remember a day when all four of you--Zain, Tara, Smudge, and you--were out together. Smudge and Tara were really Zain's friends more than yours back then, but sometimes you tagged along.
+Suddenly, voices call out behind you.
+"Hey Felson, stop right there!"
+"You sold us some real crap this time, Smudge!"
+"You better not have spent our coin already if you know what's good for you!"
+The four of you turn to see a squad of four guards, seemingly itching for a fight.
+"Well, here we go," Tara says, resigned. She's seen this play out before.
+So have you. You know what Zain is about to do, and you think about what your options are.
 * a
-* b
+* You tell him not to get involved.
+    "I have to," Zain replies. "What are enemies," he says indicating the guardsmen and flashing a smile, "if not friends you haven't met yet?"
+- Improbably as always, Zain's approach works, and the eight of you head to the Bottom of the Barrel for drinks.
+* As you watch enemies become friends...
 - ->->
 
