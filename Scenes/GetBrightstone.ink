@@ -372,7 +372,7 @@ You find yourself in a corner of the refinery's main room, a mess of conveyer be
     -> agile_story ->
     ...and a vent cover clatters to the floor, back in the present. You drop down from the ceiling and find yourself inside the vault, just as you planned. But you hear a commotion outside the closed door--it seems a guard might have heard your entrance. You'll have to deal with that in a minute.
     * * * You turn to face the stash of Brightstone.
-* {HasTrait(inventive) and not used_group1} [\[Inventive\]] "I'll create a device to drill through the lock," you explain confidently.
+* {HasTrait(inventive) and not used_group1} \[Inventive\] "I'll create a device to drill through the lock[."]," you explain confidently.
     ~used_group1 = true
     "A drill?" Tara asks. "How will you power it?"
     "You can hook into the steam pipes!" Smudge exclaims. "They run all through the facility, attached to the main furnace."
@@ -393,7 +393,7 @@ You find yourself in a corner of the refinery's main room, a mess of conveyer be
     Shaking away the memory, you dash into the vault and slam it shit behind you. You hear the sound of the dial lock spinning, and then the muffled voice of the guard. "What was that damn combination again? I hate this thing!"
     It sounds like you'll have at least a minute or two.
     * * * You turn to face the stash of Brightstone.
-* {HasTrait(observant) and not used_group2} [\[Observant\]] "I'll watch the guards to learn the combination," you explain confidently.
+* {HasTrait(observant) and not used_group2} \[Observant\] "I'll watch the guards to learn the combination[."]," you explain confidently.
     ~used_group2 = true
     "Makes sense," Tara says. "I know you have the eyes for it."
     "Just be careful they aren't watching you while you watch them," Smudge cautions.
@@ -432,7 +432,7 @@ You find yourself in a corner of the refinery's main room, a mess of conveyer be
     
     -> direct_story ->
     * * * You turn to face the stash of Brightstone
-* {HasTrait(shrewd) and not used_group3} [\[Shrewd\]] "I'll make a deal with the vault guard."
+* {HasTrait(shrewd) and not used_group3} \[Shrewd\] "I'll make a deal with the vault guard."
     "Could work," Tara nods.
     "Just make sure you don't trade away more Brightstone than we need," Smudge says anxiously.
     Back in the refinery, the deal is easy. You promise the guard that if he lets you in, he can have 20% of whatever you grab."
@@ -443,7 +443,7 @@ You find yourself in a corner of the refinery's main room, a mess of conveyer be
     ...you are brought back to reality as more guards round the corner. The vault door is open.
     "Shit. Deal's off kid."
     You dash inside and slam the door shut before he can grab you, and shove a bunch of furniture in front to buy some time .You probably have
-* {HasTrait(charming) and not used_group3} [\[Charming\]] "I'll fool the vault guard into letting me in."
+* {HasTrait(charming) and not used_group3} \[Charming\] "I'll fool the vault guard into letting me in[."]," you say confidently.
     ~used_group3 = true
     Tara sighs.
     "Good luck, kid," Smudge says.
@@ -583,7 +583,7 @@ You nod.
 ->->
 
 =inventive_story
-...you are outside your home, helping Zain string wires between the brightstone lanterns that light your street. You've been doing this all day, but Zain won't tell you why. Finally, you connect the last one, and Zain hooks some kind of switch to the end of line.
+...you are suddenly outside your home, helping Zain string wires between the brightstone lanterns that light your street. You've been doing this all day, but Zain won't tell you why. Finally, you connect the last one, and Zain hooks some kind of switch to the end of line.
 "You do the honors," he says, handing it to you.
 * You flip the switch[.], and suddenly the street is lit in a rainbow of color. Usually the lanterns are just blue-green, but tonight they are covering the full spectrum. More than that though, they are blinking on and off in elaborate patterns, creating a light show that ripples up and down the street. 
 "Not a bad way to spend the day, huh?" Zain asks, smiling.
@@ -597,7 +597,7 @@ You nod.
 - ->->
 
 =studious_story
-...you are in your home years ago. Piles of books and papers cover every surface. The floor is covered by one giant sheet of parchment, on which you have been painstakingly drawing a full-detail map of the Brightstone mines. Zain appears from behind a stack of books to check your progress.
+...you are suddenly in your home years ago. Piles of books and papers cover every surface. The floor is covered by one giant sheet of parchment, on which you have been painstakingly drawing a full-detail map of the Brightstone mines. Zain appears from behind a stack of books to check your progress.
 "Good work so far," he says. "Now we have to start cross-referencing all of these reports of Basilisk sightings." He points to a huge pile of paper. "If we plot them all on the map, patterns will emerge. That should lead us to its nest."
 * "Can we take a break?"[] you ask. "I've been at this for hours."
 "But we're so close!" Zain pleads. "Until we stop the Basilisk it will petrify more an more people, just like it did to Mom and Dad. It could even get one of us." Zain's tone softens. "I could never let that happen."
@@ -610,7 +610,7 @@ You nod.
 - ->->
 
 =observant_story
-...you are sitting with Zain on the roof of your house, looking down at the evening street below. An endless crowd of people passes through the blue-green glow of the streetlights. Zain is teaching you how to people-watch.
+...you are suddenly sitting with Zain on the roof of your house, looking down at the evening street below. An endless crowd of people passes through the blue-green glow of the streetlights. Zain is teaching you how to people-watch.
 "I can tell that guy got in a street fight a few days ago," Zain says, pointing to a man with a slight limp. "He won though--look at how he's carrying himself."
 Zain points more people out of the crowd. "That woman is taking groceries home to her elderly father. Those kids are out past their bedtime, it's their first time sneaking out. And ooh, there's a pickpocket." Sure enough, you see the pickpocket bump into the man who won the street fight and attempt to take off. The fighter trips him up and throws him to the ground, then calmly retrieves his money and walks off, still limping.
 "How do you know all this?" you ask Zain.
@@ -625,7 +625,7 @@ Zain points more people out of the crowd. "That woman is taking groceries home t
 =empathetic_story
 ...you have a flash of a day long ago when Zain gave you some advice. He had been gone all day helping a neighbor rebuild his house. You were pretty young, and you were asking why.
 * "Does he owe you now?"
-    "We do good just to do good[."]," Zain replied. "not to amass favors. Karma handles that."
+    "Of course not. We do good just to do good," Zain replied. "not to amass favors."
     * * "Why couldn't he do it himself?"
     Zain explained how the man had let his house fall apart after his parner died. You got the sense that he was leaving out some details since you were young, but you remember what he said last.
     "Everyone is living their own story," Zain says. "Just as important as yours or mine."
@@ -665,13 +665,12 @@ Suddenly, voices call out behind you.
 "You sold us some real crap this time, Smudge!"
 "You better not have spent our coin already if you know what's good for you!"
 The four of you turn to see a squad of four guards, seemingly itching for a fight.
-"Well, here we go," Tara says, resigned. She's seen this play out before.
-So have you. You know what Zain is about to do, and you think about what your options are.
-* You make an offer of your own[,] having seen how your brother wheels and deals with people before. The guards seem surprised that a kid is talking business with them, and end up agreeing to a much lower offer than they would have otherwise.
-* You tell him not to get involved.
-    "I have to," Zain replies. "When a problem presents itself," he says indicating the guardsmen, "you can always work out a deal."
+"Well, here we go," Tara says, resigned to a fight. She's seen this play out before.
+But Zain steps in. "Calm down boys," he tells the guards. "When a problem presents itself," he says indicating Smudge, "we can always work out a deal."
+* You make an offer of your own[.], having seen how your brother wheels and deals with people before. The guards seem surprised that a kid is talking business with them, and end up agreeing to a much lower offer than they would have otherwise.
+* You let Zain work his magic[.], and before you know it all thoughts are a fight are forgotten. Zain hands over a small amount of money and a promise that Smudge will be on his best behavior from now on. Then they turn to go.
 - 
-* As they hash out what Smudge owes...
+* As the guards depart in peace...
 - ->->
 
 =charming_story
@@ -681,12 +680,11 @@ Suddenly, voices call out behind you.
 "You sold us some real crap this time, Smudge!"
 "You better not have spent our coin already if you know what's good for you!"
 The four of you turn to see a squad of four guards, seemingly itching for a fight.
-"Well, here we go," Tara says, resigned. She's seen this play out before.
-So have you. You know what Zain is about to do, and you think about what your options are.
-* a
-* You tell him not to get involved.
-    "I have to," Zain replies. "What are enemies," he says indicating the guardsmen and flashing a smile, "if not friends you haven't met yet?"
-- Improbably as always, Zain's approach works, and the eight of you head to the Bottom of the Barrel for drinks.
+"Well, here we go," Tara says, resigned to a fight. She's seen this play out before.
+//Second choice...
+* "Zain, do something!"[] you say. 
+    "Of course!" Zain replies. "What are enemies," he says indicating the guardsmen and flashing a smile, "if not friends you haven't met yet? Fellas, I think we got off on the wrong foot..."
+- Improbably as always, Zain's approach works. Introductions are made, and tensions are magically forgotten. By the end of the conversation, the eight of you head to the Bottom of the Barrel for drinks.
 * As you watch enemies become friends...
 - ->->
 
